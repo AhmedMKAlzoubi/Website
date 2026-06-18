@@ -3,57 +3,156 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ahmed | Portfolio</title>
+  <title>Embedded Projects</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
+
+  <!-- ===== Top bar ===== -->
+  <header class="topbar">
+    <a href="#home" class="brand">EMBEDDED PROJECTS</a>
     <nav>
-      <span class="logo">Ahmed.</span>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+      <a href="#projects">Projects</a>
+      <a href="#order">Order</a>
     </nav>
   </header>
 
-  <section class="hero">
-    <h1>Hi, I'm <span>Ahmed</span> 👋</h1>
-    <p>Developer · Builder · Problem Solver</p>
-    <a href="#projects" class="btn">See My Work</a>
-  </section>
-
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I'm a passionate developer who loves building things for the web. I enjoy turning ideas into clean, functional experiences.</p>
-  </section>
-
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>Project One</h3>
-        <p>A short description of what this project does and the tech used.</p>
-      </div>
-      <div class="card">
-        <h3>Project Two</h3>
-        <p>A short description of what this project does and the tech used.</p>
-      </div>
-      <div class="card">
-        <h3>Project Three</h3>
-        <p>A short description of what this project does and the tech used.</p>
-      </div>
+  <!-- ===== Landing / Home ===== -->
+  <section id="home" class="hero">
+    <div class="hero-inner">
+      <h1>Embedded Projects</h1>
+      <p class="lead">
+        Custom embedded systems and hardware, designed and built to order.
+        Browse the work below, then place an order for cash on delivery or by payment link.
+      </p>
+      <a href="#projects" class="scroll-cue">Scroll to view projects</a>
     </div>
   </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Want to work together? Reach out at <a href="mailto:ahmedmohammedkhear@gmail.com">ahmedmohammedkhear@gmail.com</a></p>
+  <!-- ===== Projects ===== -->
+  <section id="projects" class="projects">
+    <h2 class="section-title">Projects</h2>
+
+    <!-- Project 1 -->
+    <article class="project">
+      <div class="project-media">
+        <img src="images/project-1.svg" alt="Temperature and humidity monitor" />
+      </div>
+      <div class="project-body">
+        <h3>Temperature &amp; Humidity Monitor</h3>
+        <p>A compact sensor unit with a clear display and configurable alerts. Ideal for rooms, greenhouses, and storage.</p>
+        <p class="price">$120</p>
+        <button class="btn order-btn" data-project="Temperature & Humidity Monitor">Order</button>
+      </div>
+    </article>
+
+    <!-- Project 2 -->
+    <article class="project">
+      <div class="project-media">
+        <img src="images/project-2.svg" alt="Smart home controller" />
+      </div>
+      <div class="project-body">
+        <h3>Smart Home Controller</h3>
+        <p>Control lights, fans, and appliances from one small board. Works standalone or over your local network.</p>
+        <p class="price">$180</p>
+        <button class="btn order-btn" data-project="Smart Home Controller">Order</button>
+      </div>
+    </article>
+
+    <!-- Project 3 -->
+    <article class="project">
+      <div class="project-media">
+        <img src="images/project-3.svg" alt="Custom data logger" />
+      </div>
+      <div class="project-body">
+        <h3>Custom PCB Data Logger</h3>
+        <p>Records sensor data to storage with a real-time clock. Built to your channel count and sampling needs.</p>
+        <p class="price">$150</p>
+        <button class="btn order-btn" data-project="Custom PCB Data Logger">Order</button>
+      </div>
+    </article>
   </section>
 
-  <footer>
-    <p>© 2026 Ahmed. Built with ❤️</p>
+  <!-- ===== Order ===== -->
+  <section id="order" class="order">
+    <h2 class="section-title">Place an Order</h2>
+    <p class="order-note">
+      Fill in your details below. You can pay <strong>cash on delivery</strong> or
+      <strong>request a payment link</strong>. Your order is sent directly to us &mdash; nothing is stored in a database.
+    </p>
+
+    <form id="order-form" action="https://formsubmit.co/ahmedmohammedkhear@gmail.com" method="POST">
+      <!-- FormSubmit settings -->
+      <input type="hidden" name="_subject" value="New order from website" />
+      <input type="hidden" name="_template" value="table" />
+      <input type="hidden" name="_captcha" value="false" />
+      <!-- Honeypot: hidden field to trap spam bots -->
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+
+      <label>
+        Full name
+        <input type="text" name="Name" required />
+      </label>
+
+      <label>
+        Phone
+        <input type="tel" name="Phone" required />
+      </label>
+
+      <label>
+        Email (optional)
+        <input type="email" name="Email" />
+      </label>
+
+      <label>
+        Project
+        <input type="text" name="Project" id="project-field" required />
+      </label>
+
+      <label>
+        Quantity
+        <input type="number" name="Quantity" value="1" min="1" required />
+      </label>
+
+      <label>
+        Delivery location / address
+        <textarea name="Delivery location" rows="3" required></textarea>
+      </label>
+
+      <fieldset class="payment">
+        <legend>Payment method</legend>
+        <label class="radio">
+          <input type="radio" name="Payment method" value="Cash on delivery" checked />
+          Cash on delivery
+        </label>
+        <label class="radio">
+          <input type="radio" name="Payment method" value="Request payment link" />
+          Request payment link
+        </label>
+      </fieldset>
+
+      <label>
+        Notes (optional)
+        <textarea name="Notes" rows="2"></textarea>
+      </label>
+
+      <button type="submit" class="btn btn-block">Submit order</button>
+      <p id="form-status" class="form-status" role="status"></p>
+    </form>
+  </section>
+
+  <!-- spacer so the fixed contact strip never covers content -->
+  <div class="bottom-spacer"></div>
+
+  <!-- ===== Fixed contact strip ===== -->
+  <footer class="contact-strip">
+    <span>Email: ahmedmohammedkhear@gmail.com</span>
+    <span class="dot">&middot;</span>
+    <span>Phone: +000 000 0000</span>
+    <span class="dot">&middot;</span>
+    <span>Location: Your City</span>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

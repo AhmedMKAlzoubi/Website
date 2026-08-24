@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects — Embedded Projects</title>
+  <meta name="description" content="Past and ongoing embedded builds, with the specs and thinking behind them." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230a0a0b'/%3E%3Crect x='9' y='9' width='14' height='14' fill='none' stroke='%23ededed' stroke-width='2'/%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="brand">Embedded Projects</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="site-nav" id="site-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="shop.html">Shop</a>
+        <a href="projects.html" aria-current="page">Projects</a>
+        <a href="docs.html">Docs</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="page-head">
+      <div class="container">
+        <span class="eyebrow">Projects</span>
+        <h1>Selected builds</h1>
+        <p>A look at past and ongoing work — the specs, the constraints, and how each one came together. Items marked available can be ordered in the shop.</p>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="container">
+
+        <article class="project reveal">
+          <div class="project__media"><img src="images/project-1.svg" alt="Temperature and humidity monitor" /></div>
+          <div class="project__body">
+            <p class="project__num">Project 01 · Available</p>
+            <h3 class="project__title">Temperature &amp; Humidity Monitor</h3>
+            <p class="project__desc">Built around a low-power ESP32 with a crisp OLED readout. Thresholds are configurable, and it can push Wi-Fi alerts when readings drift out of range — handy for greenhouses and storage rooms.</p>
+            <p class="project__meta">ESP32 · OLED display · Wi-Fi alerts</p>
+            <a href="shop.html" class="btn btn--ghost">Order in shop &rarr;</a>
+          </div>
+        </article>
+
+        <article class="project reveal">
+          <div class="project__media"><img src="images/project-2.svg" alt="Smart home controller" /></div>
+          <div class="project__body">
+            <p class="project__num">Project 02 · Available</p>
+            <h3 class="project__title">Smart Home Controller</h3>
+            <p class="project__desc">A compact relay board that switches lights, fans, and appliances. Runs entirely on the local network — no cloud account, no data leaving your home. Designed to keep working even when the internet is down.</p>
+            <p class="project__meta">Relay control · Local network · No cloud required</p>
+            <a href="shop.html" class="btn btn--ghost">Order in shop &rarr;</a>
+          </div>
+        </article>
+
+        <article class="project reveal">
+          <div class="project__media"><img src="images/project-3.svg" alt="Custom PCB data logger" /></div>
+          <div class="project__body">
+            <p class="project__num">Project 03 · Available</p>
+            <h3 class="project__title">Custom PCB Data Logger</h3>
+            <p class="project__desc">A made-to-order logger with a real-time clock and storage to SD. Channel count and sampling rate are set to your requirements, so you only pay for what the job needs.</p>
+            <p class="project__meta">SD storage · Real-time clock · Custom channels</p>
+            <a href="shop.html" class="btn btn--ghost">Order in shop &rarr;</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="contact-strip">
+    <span><span class="label">Email</span><a href="mailto:ahmedmohammedkhear@gmail.com">ahmedmohammedkhear@gmail.com</a></span>
+    <span class="sep" aria-hidden="true"></span>
+    <span><span class="label">Phone</span><a href="tel:+9710508981447">+971 0508981447</a></span>
+    <span class="sep hide-sm" aria-hidden="true"></span>
+    <span class="hide-sm"><span class="label">Location</span>Your City</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -3,156 +3,119 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Embedded Projects</title>
+  <title>Embedded Projects — custom hardware, built to order</title>
+  <meta name="description" content="Custom embedded systems and hardware, designed and built to order." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230a0a0b'/%3E%3Crect x='9' y='9' width='14' height='14' fill='none' stroke='%23ededed' stroke-width='2'/%3E%3C/svg%3E" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- ===== Top bar ===== -->
-  <header class="topbar">
-    <a href="#home" class="brand">EMBEDDED PROJECTS</a>
-    <nav>
-      <a href="#projects">Projects</a>
-      <a href="#order">Order</a>
-    </nav>
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="brand">Embedded Projects</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="site-nav" id="site-nav" aria-label="Primary">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="about.html">About</a>
+        <a href="shop.html">Shop</a>
+        <a href="projects.html">Projects</a>
+        <a href="docs.html">Docs</a>
+      </nav>
+    </div>
   </header>
 
-  <!-- ===== Landing / Home ===== -->
-  <section id="home" class="hero">
-    <div class="hero-inner">
-      <h1>Embedded Projects</h1>
-      <p class="lead">
-        Custom embedded systems and hardware, designed and built to order.
-        Browse the work below, then place an order for cash on delivery or by payment link.
-      </p>
-      <a href="#projects" class="scroll-cue">Scroll to view projects</a>
-    </div>
-  </section>
+  <main id="main">
 
-  <!-- ===== Projects ===== -->
-  <section id="projects" class="projects">
-    <h2 class="section-title">Projects</h2>
-
-    <!-- Project 1 -->
-    <article class="project">
-      <div class="project-media">
-        <img src="images/project-1.svg" alt="Temperature and humidity monitor" />
+    <!-- ===== Hero ===== -->
+    <section class="hero">
+      <div class="hero__model" aria-hidden="true">
+        <!-- Real PCB model exported from KiCad. Swap the src to update it. -->
+        <model-viewer
+          src="models/digital_card.glb"
+          alt="3D model of the digital card PCB"
+          auto-rotate auto-rotate-delay="0" rotation-per-second="14deg"
+          camera-orbit="0deg 72deg 115%"
+          orientation="0deg 180deg 0deg"
+          interaction-prompt="none"
+          disable-zoom
+          shadow-intensity="0"
+          environment-image="neutral"
+          exposure="1.25"
+          loading="eager">
+        </model-viewer>
       </div>
-      <div class="project-body">
-        <h3>Temperature &amp; Humidity Monitor</h3>
-        <p>A compact sensor unit with a clear display and configurable alerts. Ideal for rooms, greenhouses, and storage.</p>
-        <p class="price">$120</p>
-        <button class="btn order-btn" data-project="Temperature & Humidity Monitor">Order</button>
+
+      <div class="hero__content">
+        <span class="eyebrow">Embedded systems, built to order</span>
+        <h1>Hardware, considered and built</h1>
+        <p class="lead">
+          Custom embedded systems &mdash; designed, assembled, and delivered.
+          Browse the shop, explore past builds, or read the docs.
+        </p>
+        <div class="hero-actions">
+          <a href="shop.html" class="btn">Visit the shop</a>
+          <a href="projects.html" class="btn btn--ghost">See projects</a>
+        </div>
       </div>
-    </article>
 
-    <!-- Project 2 -->
-    <article class="project">
-      <div class="project-media">
-        <img src="images/project-2.svg" alt="Smart home controller" />
+      <a href="#explore" class="scroll-cue">Scroll<span aria-hidden="true">&darr;</span></a>
+    </section>
+
+    <!-- ===== Explore / feature cards ===== -->
+    <section id="explore" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Explore</span>
+          <h2>Where to start</h2>
+          <p>Three ways in &mdash; buy a build, look through the work, or learn how it all fits together.</p>
+        </div>
+        <div class="feature-grid">
+          <a href="shop.html" class="feature-card reveal">
+            <span class="num">01</span>
+            <h3>Shop</h3>
+            <p>Ready-to-order builds with pricing. Cash on delivery or payment link.</p>
+            <span class="go">Browse &rarr;</span>
+          </a>
+          <a href="projects.html" class="feature-card reveal d1">
+            <span class="num">02</span>
+            <h3>Projects</h3>
+            <p>Past and ongoing builds, with the thinking and specs behind them.</p>
+            <span class="go">Explore &rarr;</span>
+          </a>
+          <a href="docs.html" class="feature-card reveal d2">
+            <span class="num">03</span>
+            <h3>Docs</h3>
+            <p>Guides, wiring notes, and answers to common questions.</p>
+            <span class="go">Read &rarr;</span>
+          </a>
+        </div>
       </div>
-      <div class="project-body">
-        <h3>Smart Home Controller</h3>
-        <p>Control lights, fans, and appliances from one small board. Works standalone or over your local network.</p>
-        <p class="price">$180</p>
-        <button class="btn order-btn" data-project="Smart Home Controller">Order</button>
+    </section>
+
+    <!-- ===== Short approach ===== -->
+    <section class="section" style="padding-top:0;">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Approach</span>
+          <h2>Built to fit the problem</h2>
+          <p>Each board is designed around what it actually needs to do &mdash; no bloat, no guesswork. Sensible parts, clean layout, and firmware that just works.</p>
+        </div>
       </div>
-    </article>
+    </section>
 
-    <!-- Project 3 -->
-    <article class="project">
-      <div class="project-media">
-        <img src="images/project-3.svg" alt="Custom data logger" />
-      </div>
-      <div class="project-body">
-        <h3>Custom PCB Data Logger</h3>
-        <p>Records sensor data to storage with a real-time clock. Built to your channel count and sampling needs.</p>
-        <p class="price">$150</p>
-        <button class="btn order-btn" data-project="Custom PCB Data Logger">Order</button>
-      </div>
-    </article>
-  </section>
+  </main>
 
-  <!-- ===== Order ===== -->
-  <section id="order" class="order">
-    <h2 class="section-title">Place an Order</h2>
-    <p class="order-note">
-      Fill in your details below. You can pay <strong>cash on delivery</strong> or
-      <strong>request a payment link</strong>. Your order is sent directly to us &mdash; nothing is stored in a database.
-    </p>
-
-    <form id="order-form" action="https://formsubmit.co/ahmedmohammedkhear@gmail.com" method="POST">
-      <!-- FormSubmit settings -->
-      <input type="hidden" name="_subject" value="New order from website" />
-      <input type="hidden" name="_template" value="table" />
-      <input type="hidden" name="_captcha" value="false" />
-      <!-- Honeypot: hidden field to trap spam bots -->
-      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
-
-      <label>
-        Full name
-        <input type="text" name="Name" required />
-      </label>
-
-      <label>
-        Phone
-        <input type="tel" name="Phone" required />
-      </label>
-
-      <label>
-        Email (optional)
-        <input type="email" name="Email" />
-      </label>
-
-      <label>
-        Project
-        <input type="text" name="Project" id="project-field" required />
-      </label>
-
-      <label>
-        Quantity
-        <input type="number" name="Quantity" value="1" min="1" required />
-      </label>
-
-      <label>
-        Delivery location / address
-        <textarea name="Delivery location" rows="3" required></textarea>
-      </label>
-
-      <fieldset class="payment">
-        <legend>Payment method</legend>
-        <label class="radio">
-          <input type="radio" name="Payment method" value="Cash on delivery" checked />
-          Cash on delivery
-        </label>
-        <label class="radio">
-          <input type="radio" name="Payment method" value="Request payment link" />
-          Request payment link
-        </label>
-      </fieldset>
-
-      <label>
-        Notes (optional)
-        <textarea name="Notes" rows="2"></textarea>
-      </label>
-
-      <button type="submit" class="btn btn-block">Submit order</button>
-      <p id="form-status" class="form-status" role="status"></p>
-    </form>
-  </section>
-
-  <!-- spacer so the fixed contact strip never covers content -->
-  <div class="bottom-spacer"></div>
-
-  <!-- ===== Fixed contact strip ===== -->
   <footer class="contact-strip">
-    <span>Email: ahmedmohammedkhear@gmail.com</span>
-    <span class="dot">&middot;</span>
-    <span>Phone: +000 000 0000</span>
-    <span class="dot">&middot;</span>
-    <span>Location: Your City</span>
+    <span><span class="label">Email</span><a href="mailto:ahmedmohammedkhear@gmail.com">ahmedmohammedkhear@gmail.com</a></span>
+    <span class="sep" aria-hidden="true"></span>
+    <span><span class="label">Phone</span><a href="tel:+9710508981447">+971 0508981447</a></span>
+    <span class="sep hide-sm" aria-hidden="true"></span>
+    <span class="hide-sm"><span class="label">Location</span>Your City</span>
   </footer>
 
+  <!-- 3D model viewer (loads the rotating PCB in the hero) -->
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

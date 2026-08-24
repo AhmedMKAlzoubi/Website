@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="340" height="340" viewBox="0 0 340 340">
+  <g fill="none" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Resistor -->
+    <path d="M28,55 H58 L64,44 L76,66 L88,44 L100,66 L112,44 L118,55 H150" />
+    <!-- Capacitor -->
+    <path d="M200,55 H236 M236,42 V68 M250,42 V68 M250,55 H312" />
+    <!-- Inductor -->
+    <path d="M28,150 H48 a11,9 0 0 1 22,0 a11,9 0 0 1 22,0 a11,9 0 0 1 22,0 M114,150 H150" />
+    <!-- Diode -->
+    <path d="M200,150 H238 M238,138 L238,162 L262,150 Z M262,138 V162 M262,150 H312" />
+    <!-- Ground -->
+    <path d="M80,232 V262 M62,262 H98 M69,270 H91 M76,278 H84" />
+    <!-- Op-amp -->
+    <path d="M214,240 L214,286 L258,263 Z M196,250 H214 M196,276 H214 M258,263 H300" />
+  </g>
+  <g fill="#ffffff" stroke="none">
+    <circle cx="150" cy="55" r="2.5" />
+    <circle cx="200" cy="55" r="2.5" />
+    <circle cx="114" cy="150" r="2.5" />
+    <circle cx="200" cy="150" r="2.5" />
+    <circle cx="258" cy="263" r="2.5" />
+  </g>
+</svg>

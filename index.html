@@ -1,158 +1,390 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Embedded Projects</title>
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Digital Card — DC-001 — drawing sheet</title>
+<meta name="description" content="DC-001: a custom NFC business card with an e-paper panel and three printed case variants. Dimensions, specifications and ordering." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23E7E3D9'/%3E%3Crect x='6' y='9' width='20' height='14' fill='none' stroke='%2315171A' stroke-width='2'/%3E%3Cpath d='M3 27h26' stroke='%23A93724' stroke-width='2'/%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..112,400..700&family=JetBrains+Mono:wght@400;500;700&display=swap" />
+<link rel="stylesheet" href="style.css" />
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- ===== Top bar ===== -->
-  <header class="topbar">
-    <a href="#home" class="brand">EMBEDDED PROJECTS</a>
-    <nav>
-      <a href="#projects">Projects</a>
-      <a href="#order">Order</a>
+<header class="site-header">
+  <div class="container bar">
+    <a class="brand" href="index.html">
+      <span class="pn">DC-001</span>
+      <span class="nm">Digital Card</span>
+    </a>
+    <nav class="site-nav" id="site-nav" aria-label="Primary">
+      <a href="index.html" aria-current="page">Sheet 1 · Overview</a>
+      <a href="shop.html">2 · Order</a>
+      <a href="projects.html">3 · Work</a>
+      <a href="docs.html">4 · Docs</a>
+      <a href="about.html">5 · Engineer</a>
     </nav>
-  </header>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Index</button>
+  </div>
+</header>
 
-  <!-- ===== Landing / Home ===== -->
-  <section id="home" class="hero">
-    <div class="hero-inner">
-      <h1>Embedded Projects</h1>
-      <p class="lead">
-        Custom embedded systems and hardware, designed and built to order.
-        Browse the work below, then place an order for cash on delivery or by payment link.
-      </p>
-      <a href="#projects" class="scroll-cue">Scroll to view projects</a>
+<main id="main">
+
+  <!-- ============ Hero / general arrangement ============ -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <p class="rev fade"><b>Rev A</b> <span>Issued 2026 · Made to order</span></p>
+        <h1 class="fade">A calling card with a <em>bill of materials</em>.</h1>
+        <p class="lead fade">
+          Eleven millimetres of circuit board, e-paper and NFC inside a printed shell.
+          Tap it against a phone and your details land — no app, no paper,
+          no drawer full of forgotten rectangles.
+        </p>
+        <div class="hero-actions fade">
+          <a class="btn" href="shop.html">Order a card</a>
+          <a class="btn btn--out" href="#variants">See the three bodies</a>
+        </div>
+
+        <div class="params fade">
+          <div class="row"><span class="k">Overall length</span><span class="v"><span data-count="104.6">104.6</span> mm</span></div>
+          <div class="row"><span class="k">Overall width</span><span class="v"><span data-count="69.6">69.6</span> mm</span></div>
+          <div class="row"><span class="k">Stack height</span><span class="v"><span data-count="11.1">11.1</span> mm</span></div>
+          <div class="row"><span class="k">Mass, PLA solid</span><span class="v"><span data-count="37.6">37.6</span> g</span></div>
+          <div class="row"><span class="k">Case variants</span><span class="v"><span data-count="3">3</span></span></div>
+        </div>
+      </div>
+
+      <div>
+        <div class="viewport">
+          <i></i><i></i><i></i><i></i>
+          <span class="vp-label">Fig. 1 — general arrangement</span>
+          <model-viewer
+            src="models/digital_card.glb"
+            alt="3D model of the DC-001 printed circuit board"
+            camera-orbit="-18deg 66deg 108%"
+            camera-controls touch-action="pan-y" interaction-prompt="none"
+            shadow-intensity="0.35" exposure="1.05"
+            environment-image="neutral" loading="eager">
+          </model-viewer>
+
+          <svg class="annot" viewBox="0 0 1000 920" aria-hidden="true">
+            <!-- overall length, bottom -->
+            <line class="drawline" style="--d:0" x1="180" y1="790" x2="180" y2="878"/>
+            <line class="drawline" style="--d:0" x1="820" y1="790" x2="820" y2="878"/>
+            <line class="drawline" style="--d:1" x1="180" y1="858" x2="452" y2="858"/>
+            <line class="drawline" style="--d:1" x1="548" y1="858" x2="820" y2="858"/>
+            <line class="tick drawline" style="--d:1" x1="180" y1="851" x2="180" y2="865"/>
+            <line class="tick drawline" style="--d:1" x1="820" y1="851" x2="820" y2="865"/>
+            <text x="500" y="862" text-anchor="middle">104.6</text>
+
+            <!-- overall width, left -->
+            <line class="drawline" style="--d:2" x1="150" y1="255" x2="62" y2="255"/>
+            <line class="drawline" style="--d:2" x1="150" y1="690" x2="62" y2="690"/>
+            <line class="drawline" style="--d:3" x1="76" y1="255" x2="76" y2="430"/>
+            <line class="drawline" style="--d:3" x1="76" y1="516" x2="76" y2="690"/>
+            <line class="tick drawline" style="--d:3" x1="69" y1="255" x2="83" y2="255"/>
+            <line class="tick drawline" style="--d:3" x1="69" y1="690" x2="83" y2="690"/>
+            <text x="76" y="478" text-anchor="middle">69.6</text>
+
+            <!-- leader callouts (hidden on phones, where they would be illegible) -->
+            <g class="callout">
+              <circle class="lead-dot" style="--d:4" cx="520" cy="425" r="3.5"/>
+              <path class="drawline" style="--d:4" d="M520,425 L672,335 L884,335"/>
+              <text x="676" y="327">E-paper panel</text>
+            </g>
+            <g class="callout">
+              <circle class="lead-dot" style="--d:5" cx="352" cy="556" r="3.5"/>
+              <path class="drawline" style="--d:5" d="M352,556 L236,648 L118,648"/>
+              <text x="122" y="640">NFC antenna</text>
+            </g>
+            <g class="callout">
+              <circle class="lead-dot" style="--d:5" cx="642" cy="590" r="3.5"/>
+              <path class="drawline" style="--d:5" d="M642,590 L762,662 L884,662"/>
+              <text x="766" y="654">USB-C</text>
+            </g>
+          </svg>
+
+          <span class="vp-hint">drag to rotate</span>
+        </div>
+        <p class="figcap"><b>Fig. 1</b> <span>Dimensions in millimetres · scale 1:1 · third-angle projection</span></p>
+      </div>
     </div>
   </section>
 
-  <!-- ===== Projects ===== -->
-  <section id="projects" class="projects">
-    <h2 class="section-title">Projects</h2>
+  <!-- ============ 1.0 Specification ============ -->
+  <section class="section" id="spec">
+    <div class="container">
+      <div class="sec-head">
+        <div class="top">
+          <span class="num">1.0</span>
+          <h2>Specification</h2>
+          <span class="of">Sheet 1</span>
+        </div>
+        <p class="desc fade">
+          Drawn from a blank sheet in KiCad — not a reference design with new silkscreen.
+          Every dimension below is measured off the actual board and shell.
+        </p>
+      </div>
 
-    <!-- Project 1 -->
-    <article class="project">
-      <div class="project-media">
-        <img src="images/project-1.svg" alt="Temperature and humidity monitor" />
-      </div>
-      <div class="project-body">
-        <h3>Temperature &amp; Humidity Monitor</h3>
-        <p>A compact sensor unit with a clear display and configurable alerts. Ideal for rooms, greenhouses, and storage.</p>
-        <p class="price">$120</p>
-        <button class="btn order-btn" data-project="Temperature & Humidity Monitor">Order</button>
-      </div>
-    </article>
+      <div class="table-2col">
+        <div class="fade">
+          <table class="dtable">
+            <caption>Table 1 — Board</caption>
+            <thead><tr><th>Item</th><th>Feature</th><th>Value</th></tr></thead>
+            <tbody>
+              <tr><td class="n">01</td><td>Board outline</td><td class="v">71.82 × 36.30 × 1.0</td></tr>
+              <tr><td class="n">02</td><td>Active display area</td><td class="v">60.088 × 30.704</td></tr>
+              <tr><td class="n">03</td><td>Antenna strip</td><td class="v">15.5 × 50.5</td></tr>
+              <tr><td class="n">04</td><td>Battery pocket</td><td class="v">31 × 36 × 5.5</td></tr>
+              <tr><td class="n">05</td><td>Controller</td><td class="v">ESP32-C3</td></tr>
+              <tr><td class="n">06</td><td>Charging</td><td class="v">USB-C</td></tr>
+            </tbody>
+          </table>
+        </div>
 
-    <!-- Project 2 -->
-    <article class="project">
-      <div class="project-media">
-        <img src="images/project-2.svg" alt="Smart home controller" />
+        <div class="fade">
+          <table class="dtable">
+            <caption>Table 2 — Enclosure</caption>
+            <thead><tr><th>Item</th><th>Feature</th><th>Value</th></tr></thead>
+            <tbody>
+              <tr><td class="n">07</td><td>Cavity</td><td class="v">100.6 × 65.6 × 5.5</td></tr>
+              <tr><td class="n">08</td><td>Wall / floor</td><td class="v">2.0 / 2.0</td></tr>
+              <tr><td class="n">09</td><td>Board clearance</td><td class="v">0.30</td></tr>
+              <tr><td class="n">10</td><td>Bosses</td><td class="v">4 × ⌀4.5</td></tr>
+              <tr><td class="n">11</td><td>Fixings</td><td class="v">4 × M2 × 6</td></tr>
+              <tr><td class="n">12</td><td>NFC engraving</td><td class="v">0.4 deep, 1.6 wall</td></tr>
+            </tbody>
+          </table>
+        </div>
       </div>
-      <div class="project-body">
-        <h3>Smart Home Controller</h3>
-        <p>Control lights, fans, and appliances from one small board. Works standalone or over your local network.</p>
-        <p class="price">$180</p>
-        <button class="btn order-btn" data-project="Smart Home Controller">Order</button>
-      </div>
-    </article>
-
-    <!-- Project 3 -->
-    <article class="project">
-      <div class="project-media">
-        <img src="images/project-3.svg" alt="Custom data logger" />
-      </div>
-      <div class="project-body">
-        <h3>Custom PCB Data Logger</h3>
-        <p>Records sensor data to storage with a real-time clock. Built to your channel count and sampling needs.</p>
-        <p class="price">$150</p>
-        <button class="btn order-btn" data-project="Custom PCB Data Logger">Order</button>
-      </div>
-    </article>
+    </div>
   </section>
 
-  <!-- ===== Order ===== -->
-  <section id="order" class="order">
-    <h2 class="section-title">Place an Order</h2>
-    <p class="order-note">
-      Fill in your details below. You can pay <strong>cash on delivery</strong> or
-      <strong>request a payment link</strong>. Your order is sent directly to us &mdash; nothing is stored in a database.
-    </p>
+  <!-- ============ 2.0 Case variants ============ -->
+  <section class="section" id="variants">
+    <div class="container">
+      <div class="sec-head">
+        <div class="top">
+          <span class="num">2.0</span>
+          <h2>Case variants</h2>
+          <span class="of">3 off</span>
+        </div>
+        <p class="desc fade">
+          One board, three bodies. The tray, cover and screw pattern are common to all three —
+          so a board bought today accepts a shell printed next year.
+        </p>
+      </div>
 
-    <form id="order-form" action="https://formsubmit.co/ahmedmohammedkhear@gmail.com" method="POST">
-      <!-- FormSubmit settings -->
-      <input type="hidden" name="_subject" value="New order from website" />
-      <input type="hidden" name="_template" value="table" />
-      <input type="hidden" name="_captcha" value="false" />
-      <!-- Honeypot: hidden field to trap spam bots -->
-      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+      <div class="variants">
+        <div class="vlist" role="tablist" aria-label="Case variant">
+          <button class="vtab" role="tab" aria-selected="true"
+            data-model="models/case-card.glb" data-alt="Card variant, flat case"
+            data-name="Card" data-fig="Fig. 2"
+            data-note="The baseline. Flat in the hand, back sealed with no openings, and the contactless mark engraved into the cover directly over the antenna."
+            data-specs='[["Footprint","104.6 × 69.6"],["Stack height","11.1"],["Mass, PLA solid","37.6 g"],["Tray volume","20.6 cm³"],["Fixings","4 × M2 × 6"],["Back face","sealed"]]'>
+            <span class="vn">2.1</span>
+            <span><h3>Card</h3><p>Flat in the hand</p></span>
+            <span class="vd">11.1 mm</span>
+          </button>
 
-      <label>
-        Full name
-        <input type="text" name="Name" required />
-      </label>
+          <button class="vtab" role="tab" aria-selected="false"
+            data-model="models/case-nameplate.glb" data-alt="Desk nameplate variant"
+            data-name="Desk nameplate" data-fig="Fig. 3"
+            data-note="A rounded plinth fused to the tray as one printed body, leaning the panel 18° back so it faces you across a desk. The USB-C port ends up on top, still reachable."
+            data-specs='[["Standing size","104.6 × 36.1 × 78.3"],["Lean from vertical","18°"],["Mass, PLA solid","103 g"],["Plinth volume","52.8 cm³"],["Screen centre","47.6 above desk"],["Desk contact","104.6 × 26.9"]]'>
+            <span class="vn">2.2</span>
+            <span><h3>Desk nameplate</h3><p>Leans back 18°</p></span>
+            <span class="vd">78.3 mm</span>
+          </button>
 
-      <label>
-        Phone
-        <input type="tel" name="Phone" required />
-      </label>
+          <button class="vtab" role="tab" aria-selected="false"
+            data-model="models/case-badge.glb" data-alt="Conference badge variant"
+            data-name="Conference badge" data-fig="Fig. 4"
+            data-note="An L-shaped flange wrapping the top and right edges, centred in the stack so the badge hangs flat against the chest rather than tipping forward."
+            data-specs='[["Outline","114.6 × 79.6"],["Flange","10 deep × 4 thick"],["Mass, PLA solid","45.8 g"],["Lanyard slots","4 × 15 × 3"],["Top slot spread","50"],["Side slot spread","30"]]'>
+            <span class="vn">2.3</span>
+            <span><h3>Conference badge</h3><p>Hangs either way</p></span>
+            <span class="vd">114.6 mm</span>
+          </button>
+        </div>
 
-      <label>
-        Email (optional)
-        <input type="email" name="Email" />
-      </label>
+        <div class="vpanel">
+          <div class="viewport">
+            <i></i><i></i><i></i><i></i>
+            <span class="vp-label" id="variant-name">Card</span>
+            <model-viewer id="variant-model"
+              src="models/case-card.glb" alt="Card variant, flat case"
+              camera-orbit="-24deg 64deg 104%"
+              auto-rotate auto-rotate-delay="1200" rotation-per-second="10deg"
+              camera-controls touch-action="pan-y" interaction-prompt="none"
+              shadow-intensity="0.4" exposure="1.05" environment-image="neutral">
+            </model-viewer>
+            <span class="vp-hint">drag to rotate</span>
+          </div>
+          <p class="figcap"><b id="variant-fig">Fig. 2</b> <span>Assembled view · tray and cover</span></p>
 
-      <label>
-        Project
-        <input type="text" name="Project" id="project-field" required />
-      </label>
+          <p class="note" id="variant-note"></p>
 
-      <label>
-        Quantity
-        <input type="number" name="Quantity" value="1" min="1" required />
-      </label>
-
-      <label>
-        Delivery location / address
-        <textarea name="Delivery location" rows="3" required></textarea>
-      </label>
-
-      <fieldset class="payment">
-        <legend>Payment method</legend>
-        <label class="radio">
-          <input type="radio" name="Payment method" value="Cash on delivery" checked />
-          Cash on delivery
-        </label>
-        <label class="radio">
-          <input type="radio" name="Payment method" value="Request payment link" />
-          Request payment link
-        </label>
-      </fieldset>
-
-      <label>
-        Notes (optional)
-        <textarea name="Notes" rows="2"></textarea>
-      </label>
-
-      <button type="submit" class="btn btn-block">Submit order</button>
-      <p id="form-status" class="form-status" role="status"></p>
-    </form>
+          <table class="dtable" style="margin-top:1.5rem">
+            <caption>Selected dimensions</caption>
+            <thead><tr><th>Item</th><th>Feature</th><th>Value</th></tr></thead>
+            <tbody id="variant-specs"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <!-- spacer so the fixed contact strip never covers content -->
-  <div class="bottom-spacer"></div>
+  <!-- ============ 3.0 Build sequence ============ -->
+  <section class="section" id="sequence">
+    <div class="container">
+      <div class="sec-head">
+        <div class="top">
+          <span class="num">3.0</span>
+          <h2>Build sequence</h2>
+          <span class="of">5 operations</span>
+        </div>
+        <p class="desc fade">What happens between your order arriving and the card reaching you.</p>
+      </div>
 
-  <!-- ===== Fixed contact strip ===== -->
-  <footer class="contact-strip">
-    <span>Email: ahmedmohammedkhear@gmail.com</span>
-    <span class="dot">&middot;</span>
-    <span>Phone: +000 000 0000</span>
-    <span class="dot">&middot;</span>
-    <span>Location: Your City</span>
-  </footer>
+      <div class="fade">
+        <table class="dtable">
+          <caption>Table 3 — Order of operations</caption>
+          <thead><tr><th>Op</th><th>Operation</th><th>Notes</th></tr></thead>
+          <tbody>
+            <tr><td class="n">10</td><td>Schematic &amp; layout</td><td>Drawn in KiCad. Already done for stock variants; redrawn only for custom work.</td></tr>
+            <tr><td class="n">20</td><td>Fabricate &amp; populate</td><td>Bare boards ordered, components placed and soldered by hand, panel and antenna fitted.</td></tr>
+            <tr><td class="n">30</td><td>Print enclosure</td><td>Tray and cover printed in the chosen colour. Card and badge print back-face down; nameplate stands on its plinth. No supports.</td></tr>
+            <tr><td class="n">40</td><td>Assemble</td><td>Board drops onto four ⌀4.5 bosses, cover closes, one M2 × 6 per corner clamps the stack.</td></tr>
+            <tr><td class="n">50</td><td>Programme &amp; test</td><td>Your name, title and links written to the panel and NFC tag, then tested against a phone before it ships.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
 
-  <script src="script.js"></script>
+  <!-- ============ 4.0 Related work ============ -->
+  <section class="section" id="related">
+    <div class="container">
+      <div class="sec-head">
+        <div class="top">
+          <span class="num">4.0</span>
+          <h2>Related work</h2>
+          <span class="of">See sheet 3</span>
+        </div>
+      </div>
+
+      <div class="index-list fade">
+        <a class="irow" href="projects.html">
+          <span class="n">4.1</span>
+          <span><h3>Smart Helmet, HUD navigation</h3></span>
+          <span class="meta">ESP32 · BLE · transparent OLED</span>
+          <span class="go">Open →</span>
+        </a>
+        <a class="irow" href="projects.html">
+          <span class="n">4.2</span>
+          <span><h3>Digital Lock System</h3></span>
+          <span class="meta">VHDL · FPGA</span>
+          <span class="go">Open →</span>
+        </a>
+        <a class="irow" href="projects.html">
+          <span class="n">4.3</span>
+          <span><h3>Temperature-Controlled Fan</h3></span>
+          <span class="meta">PIC · LM35 · DHT11</span>
+          <span class="go">Open →</span>
+        </a>
+        <a class="irow" href="projects.html">
+          <span class="n">4.4</span>
+          <span><h3>Arduino Weather Station</h3></span>
+          <span class="meta">Arduino · multi-sensor</span>
+          <span class="go">Open →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 5.0 Revision history ============ -->
+  <section class="section section--tight" id="revisions">
+    <div class="container">
+      <div class="sec-head">
+        <div class="top">
+          <span class="num">5.0</span>
+          <h2>Revision history</h2>
+          <span class="of">Latest: A</span>
+        </div>
+      </div>
+      <div class="fade">
+        <table class="dtable">
+          <thead><tr><th>Rev</th><th>Change</th><th>Date</th></tr></thead>
+          <tbody>
+            <tr><td class="n">A</td><td>Back face sealed; SW1/SW2 pinholes closed. NFC mark added to cover.</td><td class="v">2026-08</td></tr>
+            <tr><td class="n">—</td><td>Nameplate plinth softened; 41% less plastic than the original wedge.</td><td class="v">2026-08</td></tr>
+            <tr><td class="n">—</td><td>Badge flange moved to the right edge to clear the FPC exit slot.</td><td class="v">2026-08</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="cta fade">
+        <div class="inner">
+          <div>
+            <h2>Put your name on one</h2>
+            <p>Built to order. Cash on delivery or a payment link — your call.</p>
+          </div>
+          <a class="btn" href="shop.html">Go to order sheet</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="fgrid">
+      <div>
+        <h5>DC-001</h5>
+        <p class="blurb">Custom embedded hardware, drawn and built to order by Ahmed Alzoubi in the UAE.</p>
+      </div>
+      <div>
+        <h5>Sheets</h5>
+        <a href="index.html">1 · Overview</a><a href="shop.html">2 · Order</a>
+        <a href="projects.html">3 · Work</a><a href="docs.html">4 · Docs</a><a href="about.html">5 · Engineer</a>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <a href="mailto:ahmedmohammedkhear@gmail.com">Email</a>
+        <a href="tel:+971508981447">+971 50 898 1447</a>
+        <a href="https://github.com/AhmedMKAlzoubi" target="_blank" rel="noopener">GitHub</a>
+      </div>
+      <div>
+        <h5>Terms</h5>
+        <p>Cash on delivery</p><p>Payment link</p><p>No account required</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Fixed title block -->
+<div class="titleblock">
+  <div class="cellx"><span class="k">Project</span><span class="v">DC-001 Digital Card</span></div>
+  <div class="cellx opt"><span class="k">Sheet</span><span class="v">1 of 5</span></div>
+  <div class="cellx opt"><span class="k">Rev</span><span class="v">A</span></div>
+  <div class="cellx opt"><span class="k">Scale</span><span class="v">1:1</span></div>
+  <div class="cellx opt"><span class="k">Drawn by</span><span class="v">A. Alzoubi</span></div>
+  <div class="cellx"><span class="k">Contact</span><span class="v"><a href="mailto:ahmedmohammedkhear@gmail.com">ahmedmohammedkhear@gmail.com</a></span></div>
+  <div class="cellx"><span class="k">Position</span><span class="v" id="scroll-readout">000%</span></div>
+</div>
+
+<script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

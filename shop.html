@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Order — DC-001 Digital Card</title>
+<meta name="description" content="Order sheet for the DC-001 Digital Card — three case variants, cash on delivery or payment link." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23E7E3D9'/%3E%3Crect x='6' y='9' width='20' height='14' fill='none' stroke='%2315171A' stroke-width='2'/%3E%3Cpath d='M3 27h26' stroke='%23A93724' stroke-width='2'/%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..112,400..700&family=JetBrains+Mono:wght@400;500;700&display=swap" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="container bar">
+    <a class="brand" href="index.html"><span class="pn">DC-001</span><span class="nm">Digital Card</span></a>
+    <nav class="site-nav" id="site-nav" aria-label="Primary">
+      <a href="index.html">1 · Overview</a>
+      <a href="shop.html" aria-current="page">Sheet 2 · Order</a>
+      <a href="projects.html">3 · Work</a>
+      <a href="docs.html">4 · Docs</a>
+      <a href="about.html">5 · Engineer</a>
+    </nav>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Index</button>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="section section--tight">
+    <div class="container">
+      <div class="sec-head">
+        <div class="top">
+          <span class="num">2.0</span>
+          <h2>Order sheet</h2>
+          <span class="of">Sheet 2</span>
+        </div>
+        <p class="desc fade">
+          Everything is built to order. Pick a body below, then fill in the request at the bottom —
+          we confirm the specification and a final price before anything is made.
+        </p>
+      </div>
+
+      <!-- Variant 1 -->
+      <article class="prow fade">
+        <div class="pv">
+          <span class="vp-label">2.1 — Card</span>
+          <model-viewer src="models/case-card.glb" alt="Card variant"
+            camera-orbit="-24deg 64deg 106%" auto-rotate auto-rotate-delay="900" rotation-per-second="10deg"
+            disable-zoom interaction-prompt="none" shadow-intensity="0.4" exposure="1.05" environment-image="neutral"></model-viewer>
+        </div>
+        <div>
+          <p class="sub">Variant 2.1 · baseline</p>
+          <h3>Card</h3>
+          <p>
+            Flat in the hand at 11.1 mm, with the back sealed as one unbroken surface —
+            no pinholes, and the switches shut safely inside. The contactless mark is engraved
+            0.4 mm into the cover, running up the antenna strip so the symbol sits over the
+            antenna it points at. This is the one for a wallet.
+          </p>
+          <table class="dtable">
+            <tbody>
+              <tr><td>Footprint</td><td class="v">104.6 × 69.6 × 11.1 <span class="unit">mm</span></td></tr>
+              <tr><td>Mass</td><td class="v">37.6 <span class="unit">g</span></td></tr>
+              <tr><td>Lead time</td><td class="v">confirmed on order</td></tr>
+            </tbody>
+          </table>
+          <div class="buy">
+            <span class="price">AED 260 <small>indicative · confirmed on order</small></span>
+            <button class="btn" data-order="DC-001 — Card">Add to request</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Variant 2 -->
+      <article class="prow fade">
+        <div class="pv">
+          <span class="vp-label">2.2 — Nameplate</span>
+          <model-viewer src="models/case-nameplate.glb" alt="Desk nameplate variant"
+            camera-orbit="-24deg 66deg 106%" auto-rotate auto-rotate-delay="900" rotation-per-second="10deg"
+            disable-zoom interaction-prompt="none" shadow-intensity="0.4" exposure="1.05" environment-image="neutral"></model-viewer>
+        </div>
+        <div>
+          <p class="sub">Variant 2.2 · standing</p>
+          <h3>Desk nameplate</h3>
+          <p>
+            The same card with a rounded plinth fused onto the tray as a single printed body —
+            nothing extra to assemble. It leans 18° from vertical, putting the screen centre
+            47.6 mm above the desk and the USB-C port on the top edge where it stays reachable.
+          </p>
+          <table class="dtable">
+            <tbody>
+              <tr><td>Standing size</td><td class="v">104.6 × 36.1 × 78.3 <span class="unit">mm</span></td></tr>
+              <tr><td>Mass</td><td class="v">103 <span class="unit">g</span></td></tr>
+              <tr><td>Desk contact</td><td class="v">104.6 × 26.9 <span class="unit">mm</span></td></tr>
+            </tbody>
+          </table>
+          <div class="buy">
+            <span class="price">AED 320 <small>indicative · confirmed on order</small></span>
+            <button class="btn" data-order="DC-001 — Desk nameplate">Add to request</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Variant 3 -->
+      <article class="prow fade">
+        <div class="pv">
+          <span class="vp-label">2.3 — Badge</span>
+          <model-viewer src="models/case-badge.glb" alt="Conference badge variant"
+            camera-orbit="-24deg 64deg 106%" auto-rotate auto-rotate-delay="900" rotation-per-second="10deg"
+            disable-zoom interaction-prompt="none" shadow-intensity="0.4" exposure="1.05" environment-image="neutral"></model-viewer>
+        </div>
+        <div>
+          <p class="sub">Variant 2.3 · hanging</p>
+          <h3>Conference badge</h3>
+          <p>
+            An L-shaped flange wraps the top and right edges — right specifically, because the
+            left wall carries the FPC exit slot. Four obround slots let one badge hang two ways:
+            the top pair for landscape, the side pair for portrait. Landscape is the better hang.
+          </p>
+          <table class="dtable">
+            <tbody>
+              <tr><td>Outline</td><td class="v">114.6 × 79.6 × 11.1 <span class="unit">mm</span></td></tr>
+              <tr><td>Mass</td><td class="v">45.8 <span class="unit">g</span></td></tr>
+              <tr><td>Lanyard slots</td><td class="v">4 × 15 × 3 <span class="unit">mm</span></td></tr>
+            </tbody>
+          </table>
+          <div class="buy">
+            <span class="price">AED 285 <small>indicative · confirmed on order</small></span>
+            <button class="btn" data-order="DC-001 — Conference badge">Add to request</button>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Other builds -->
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="sec-head">
+        <div class="top">
+          <span class="num">2.4</span>
+          <h2>Other builds to order</h2>
+          <span class="of">Quoted individually</span>
+        </div>
+        <p class="desc fade">Not after a card? These are built to your requirements — send a request and we will quote it.</p>
+      </div>
+
+      <div class="index-list fade">
+        <div class="irow">
+          <span class="n">A</span>
+          <span><h3>Temperature &amp; Humidity Monitor</h3></span>
+          <span class="meta">ESP32 · OLED · Wi-Fi alerts</span>
+          <button class="btn btn--out" data-order="Temperature &amp; Humidity Monitor">Request</button>
+        </div>
+        <div class="irow">
+          <span class="n">B</span>
+          <span><h3>Smart Home Controller</h3></span>
+          <span class="meta">Relays · local network · no cloud</span>
+          <button class="btn btn--out" data-order="Smart Home Controller">Request</button>
+        </div>
+        <div class="irow">
+          <span class="n">C</span>
+          <span><h3>Custom PCB Data Logger</h3></span>
+          <span class="meta">SD storage · RTC · custom channels</span>
+          <button class="btn btn--out" data-order="Custom PCB Data Logger">Request</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Order form -->
+  <section class="section" id="order" style="padding-top:0">
+    <div class="container">
+      <div class="form-sheet fade">
+        <div class="fhd">
+          <h3>Request for order</h3>
+          <span>Form DC-RFO · Rev A</span>
+        </div>
+        <div class="fbody">
+          <div class="notice">
+            <div>
+              <b>Data handling</b>
+              This form is emailed straight to us and is <strong>not stored in any database</strong>.
+              No account is created, no card details are handled by this site, and nothing is tracked.
+            </div>
+          </div>
+
+          <form id="order-form" action="https://formsubmit.co/ahmedmohammedkhear@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="DC-001 order request" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+            <div class="frow">
+              <div class="field">
+                <label for="name">Full name <span class="req">*</span></label>
+                <input type="text" id="name" name="Name" autocomplete="name" required />
+              </div>
+              <div class="field">
+                <label for="phone">Phone <span class="req">*</span></label>
+                <input type="tel" id="phone" name="Phone" autocomplete="tel" required />
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="email">Email <span class="req">*</span></label>
+              <input type="email" id="email" name="Email" autocomplete="email" required />
+              <p class="hint">Used to confirm the order and send a payment link if you ask for one.</p>
+            </div>
+
+            <div class="frow">
+              <div class="field">
+                <label for="item">Item <span class="req">*</span></label>
+                <input type="text" id="item" name="Item" value="DC-001 — Card" required />
+              </div>
+              <div class="field">
+                <label for="quantity">Quantity <span class="req">*</span></label>
+                <input type="number" id="quantity" name="Quantity" value="1" min="1" required />
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="printed">Card contents</label>
+              <textarea id="printed" name="Card contents" rows="3" placeholder="Name, title, and the links to sit behind the NFC tap."></textarea>
+            </div>
+
+            <div class="field">
+              <label for="address">Delivery address <span class="req">*</span></label>
+              <textarea id="address" name="Delivery address" rows="3" required></textarea>
+            </div>
+
+            <fieldset>
+              <legend>Payment method</legend>
+              <div class="choices">
+                <label class="choice"><input type="radio" name="Payment method" value="Cash on delivery" checked /> Cash on delivery</label>
+                <label class="choice"><input type="radio" name="Payment method" value="Request payment link" /> Request payment link</label>
+              </div>
+            </fieldset>
+
+            <div class="field">
+              <label for="notes">Notes</label>
+              <textarea id="notes" name="Notes" rows="2" placeholder="Case colour, deadline, customisations…"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn--block" id="submit-btn">Submit request</button>
+            <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="fgrid">
+      <div><h5>DC-001</h5><p class="blurb">Custom embedded hardware, drawn and built to order by Ahmed Alzoubi in the UAE.</p></div>
+      <div><h5>Sheets</h5><a href="index.html">1 · Overview</a><a href="shop.html">2 · Order</a><a href="projects.html">3 · Work</a><a href="docs.html">4 · Docs</a><a href="about.html">5 · Engineer</a></div>
+      <div><h5>Contact</h5><a href="mailto:ahmedmohammedkhear@gmail.com">Email</a><a href="tel:+971508981447">+971 50 898 1447</a><a href="https://github.com/AhmedMKAlzoubi" target="_blank" rel="noopener">GitHub</a></div>
+      <div><h5>Terms</h5><p>Cash on delivery</p><p>Payment link</p><p>No account required</p></div>
+    </div>
+  </div>
+</footer>
+
+<div class="titleblock">
+  <div class="cellx"><span class="k">Project</span><span class="v">DC-001 Digital Card</span></div>
+  <div class="cellx opt"><span class="k">Sheet</span><span class="v">2 of 5</span></div>
+  <div class="cellx opt"><span class="k">Rev</span><span class="v">A</span></div>
+  <div class="cellx opt"><span class="k">Form</span><span class="v">DC-RFO</span></div>
+  <div class="cellx opt"><span class="k">Drawn by</span><span class="v">A. Alzoubi</span></div>
+  <div class="cellx"><span class="k">Contact</span><span class="v"><a href="mailto:ahmedmohammedkhear@gmail.com">ahmedmohammedkhear@gmail.com</a></span></div>
+  <div class="cellx"><span class="k">Position</span><span class="v" id="scroll-readout">000%</span></div>
+</div>
+
+<script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

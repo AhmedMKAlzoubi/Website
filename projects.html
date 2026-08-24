@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Work — DC-001 Digital Card</title>
+<meta name="description" content="Embedded systems, FPGA and microcontroller projects built by Ahmed Alzoubi." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23E7E3D9'/%3E%3Crect x='6' y='9' width='20' height='14' fill='none' stroke='%2315171A' stroke-width='2'/%3E%3Cpath d='M3 27h26' stroke='%23A93724' stroke-width='2'/%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..112,400..700&family=JetBrains+Mono:wght@400;500;700&display=swap" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="container bar">
+    <a class="brand" href="index.html"><span class="pn">DC-001</span><span class="nm">Digital Card</span></a>
+    <nav class="site-nav" id="site-nav" aria-label="Primary">
+      <a href="index.html">1 · Overview</a>
+      <a href="shop.html">2 · Order</a>
+      <a href="projects.html" aria-current="page">Sheet 3 · Work</a>
+      <a href="docs.html">4 · Docs</a>
+      <a href="about.html">5 · Engineer</a>
+    </nav>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Index</button>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="section section--tight">
+    <div class="container">
+      <div class="sec-head">
+        <div class="top">
+          <span class="num">3.0</span>
+          <h2>Drawing index</h2>
+          <span class="of">Sheet 3</span>
+        </div>
+        <p class="desc fade">
+          Seven builds, in rough order of how much of it I drew myself.
+          The card is the newest; the rest is what taught me how to make it.
+        </p>
+      </div>
+
+      <div class="fade" style="margin-bottom:3rem">
+        <table class="dtable">
+          <caption>Table 4 — Index of work</caption>
+          <thead><tr><th>Ref</th><th>Title</th><th>Discipline</th><th>Year</th></tr></thead>
+          <tbody>
+            <tr><td class="n">3.1</td><td>Digital Card</td><td>PCB · firmware · enclosure</td><td class="v">2026</td></tr>
+            <tr><td class="n">3.2</td><td>Smart Helmet, HUD navigation</td><td>Embedded · mobile</td><td class="v">2025</td></tr>
+            <tr><td class="n">3.3</td><td>Digital Lock System</td><td>FPGA · VHDL</td><td class="v">2024</td></tr>
+            <tr><td class="n">3.4</td><td>Temperature-Controlled Fan</td><td>Microcontroller</td><td class="v">2024</td></tr>
+            <tr><td class="n">3.5</td><td>Arduino Weather Station</td><td>Sensing</td><td class="v">2023</td></tr>
+            <tr><td class="n">3.6</td><td>Motion Sensor Security System</td><td>Sensing</td><td class="v">2023</td></tr>
+            <tr><td class="n">3.7</td><td>Pick-and-Place Robotic Arm</td><td>Robotics simulation</td><td class="v">2023</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <article class="detail fade">
+        <div class="hd"><h3>3.1 — Digital Card</h3><span class="tag">Current · for sale</span></div>
+        <p>
+          A custom NFC business card with an e-paper panel, drawn from a blank sheet in KiCad.
+          ESP32-C3, USB-C charging, a Li-Po cell and an antenna strip on a 71.82 × 36.30 mm board,
+          inside a printed shell with 0.30 mm clearance around it. Three case variants — card,
+          desk nameplate and conference badge — share one tray, cover and four-screw pattern,
+          so any board fits any shell.
+        </p>
+        <p class="stack">KiCad · ESP32-C3 · e-paper · NFC · FreeCAD · PLA</p>
+        <p style="margin-top:1.25rem"><a class="btn" href="shop.html">Order one</a></p>
+      </article>
+
+      <article class="detail fade">
+        <div class="hd"><h3>3.2 — Smart Helmet, HUD navigation</h3><span class="tag">Graduation project</span></div>
+        <p>
+          An ESP32-based motorcycle helmet that projects turn-by-turn directions onto a transparent
+          OLED in the rider's field of view, so navigation never means looking down at a phone.
+          A companion Android app pulls the route from the Google Maps API and feeds each instruction
+          over BLE as the rider approaches it.
+        </p>
+        <p class="stack">ESP32 · BLE · transparent OLED · Android · Google Maps API · C++</p>
+      </article>
+
+      <article class="detail fade">
+        <div class="hd"><h3>3.3 — Digital Lock System</h3><span class="tag">FPGA</span></div>
+        <p>
+          A secure digital lock implemented in VHDL on FPGA — password authentication driven by a
+          state machine, with the access-control logic written out explicitly rather than leaned on
+          a microcontroller library. Simulated and synthesised in Xilinx ISE.
+        </p>
+        <p class="stack">VHDL · FPGA · Xilinx ISE</p>
+      </article>
+
+      <article class="detail fade">
+        <div class="hd"><h3>3.4 — Temperature-Controlled Fan</h3><span class="tag">Microcontroller</span></div>
+        <p>
+          A PIC-based cooling system that reads ambient conditions from an LM35 and a DHT11 and
+          adjusts DC fan speed to match, with the current reading and duty shown live on an LCD.
+        </p>
+        <p class="stack">PIC · MikroC · LM35 · DHT11 · LCD</p>
+      </article>
+
+      <article class="detail fade">
+        <div class="hd"><h3>3.5 — Arduino Weather Station</h3><span class="tag">Sensing</span></div>
+        <p>
+          A multi-sensor station logging temperature, humidity and rainfall, with all three shown
+          live on an LCD — built for collecting environmental data over long stretches.
+        </p>
+        <p class="stack">Arduino UNO · DHT11 · rain sensor · LCD · C++</p>
+      </article>
+
+      <article class="detail fade">
+        <div class="hd"><h3>3.6 — Motion Sensor Security System</h3><span class="tag">Sensing</span></div>
+        <p>
+          A motion-activated alarm using a PIR sensor to spot movement, raising both visual and
+          audible alerts and reporting state on an LCD.
+        </p>
+        <p class="stack">Arduino UNO · PIR · buzzer · LED · LCD</p>
+      </article>
+
+      <article class="detail fade">
+        <div class="hd"><h3>3.7 — Pick-and-Place Robotic Arm</h3><span class="tag">Simulation</span></div>
+        <p>
+          A 6-DOF arm simulated in RoboDK for automated pick-and-place on an industrial line,
+          working through forward and inverse kinematics to place the end effector precisely.
+        </p>
+        <p class="stack">RoboDK · 6-DOF · forward &amp; inverse kinematics</p>
+      </article>
+
+      <div class="cta fade" style="margin-top:3rem">
+        <div class="inner">
+          <div>
+            <h2>Something else in mind?</h2>
+            <p>Most of these can be adapted, and new builds are welcome. Tell me what it needs to do.</p>
+          </div>
+          <a class="btn" href="shop.html#order">Send a request</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="fgrid">
+      <div><h5>DC-001</h5><p class="blurb">Custom embedded hardware, drawn and built to order by Ahmed Alzoubi in the UAE.</p></div>
+      <div><h5>Sheets</h5><a href="index.html">1 · Overview</a><a href="shop.html">2 · Order</a><a href="projects.html">3 · Work</a><a href="docs.html">4 · Docs</a><a href="about.html">5 · Engineer</a></div>
+      <div><h5>Contact</h5><a href="mailto:ahmedmohammedkhear@gmail.com">Email</a><a href="tel:+971508981447">+971 50 898 1447</a><a href="https://github.com/AhmedMKAlzoubi" target="_blank" rel="noopener">GitHub</a></div>
+      <div><h5>Terms</h5><p>Cash on delivery</p><p>Payment link</p><p>No account required</p></div>
+    </div>
+  </div>
+</footer>
+
+<div class="titleblock">
+  <div class="cellx"><span class="k">Project</span><span class="v">DC-001 Digital Card</span></div>
+  <div class="cellx opt"><span class="k">Sheet</span><span class="v">3 of 5</span></div>
+  <div class="cellx opt"><span class="k">Rev</span><span class="v">A</span></div>
+  <div class="cellx opt"><span class="k">Content</span><span class="v">Index of work</span></div>
+  <div class="cellx opt"><span class="k">Drawn by</span><span class="v">A. Alzoubi</span></div>
+  <div class="cellx"><span class="k">Contact</span><span class="v"><a href="mailto:ahmedmohammedkhear@gmail.com">ahmedmohammedkhear@gmail.com</a></span></div>
+  <div class="cellx"><span class="k">Position</span><span class="v" id="scroll-readout">000%</span></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Docs — DC-001 Digital Card</title>
+<meta name="description" content="Specifications, assembly, ordering and care for the DC-001 Digital Card." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23E7E3D9'/%3E%3Crect x='6' y='9' width='20' height='14' fill='none' stroke='%2315171A' stroke-width='2'/%3E%3Cpath d='M3 27h26' stroke='%23A93724' stroke-width='2'/%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..112,400..700&family=JetBrains+Mono:wght@400;500;700&display=swap" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="container bar">
+    <a class="brand" href="index.html"><span class="pn">DC-001</span><span class="nm">Digital Card</span></a>
+    <nav class="site-nav" id="site-nav" aria-label="Primary">
+      <a href="index.html">1 · Overview</a>
+      <a href="shop.html">2 · Order</a>
+      <a href="projects.html">3 · Work</a>
+      <a href="docs.html" aria-current="page">Sheet 4 · Docs</a>
+      <a href="about.html">5 · Engineer</a>
+    </nav>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Index</button>
+  </div>
+</header>
+
+<main id="main">
+  <section class="section section--tight">
+    <div class="container">
+      <div class="sec-head">
+        <div class="top">
+          <span class="num">4.0</span>
+          <h2>Notes &amp; procedures</h2>
+          <span class="of">Sheet 4</span>
+        </div>
+        <p class="desc fade">How the card goes together, how ordering works, and how to look after it.</p>
+      </div>
+
+      <div class="docs-wrap">
+        <nav class="docs-rail" aria-label="Sections">
+          <a href="#specs" class="active"><span>4.1</span> Specifications</a>
+          <a href="#variants"><span>4.2</span> Case variants</a>
+          <a href="#assembly"><span>4.3</span> Assembly</a>
+          <a href="#ordering"><span>4.4</span> Ordering</a>
+          <a href="#care"><span>4.5</span> Care</a>
+          <a href="#faq"><span>4.6</span> Questions</a>
+        </nav>
+
+        <div>
+          <section class="doc-section" id="specs">
+            <h2>4.1 — Specifications</h2>
+            <table class="dtable">
+              <caption>Table 5 — Dimensions, millimetres</caption>
+              <thead><tr><th>Item</th><th>Feature</th><th>Value</th></tr></thead>
+              <tbody>
+                <tr><td class="n">01</td><td>Board outline</td><td class="v">71.82 × 36.30 × 1.0</td></tr>
+                <tr><td class="n">02</td><td>Active display area</td><td class="v">60.088 × 30.704</td></tr>
+                <tr><td class="n">03</td><td>Cavity</td><td class="v">100.6 × 65.6 × 5.5</td></tr>
+                <tr><td class="n">04</td><td>Wall / floor</td><td class="v">2.0 / 2.0</td></tr>
+                <tr><td class="n">05</td><td>Board clearance</td><td class="v">0.30</td></tr>
+                <tr><td class="n">06</td><td>Battery pocket</td><td class="v">31 × 36 × 5.5</td></tr>
+                <tr><td class="n">07</td><td>Antenna strip</td><td class="v">15.5 × 50.5</td></tr>
+                <tr><td class="n">08</td><td>NFC engraving</td><td class="v">0.4 deep, 1.6 wall left</td></tr>
+                <tr><td class="n">09</td><td>Fixings</td><td class="v">4 × M2 × 6</td></tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section class="doc-section" id="variants">
+            <h2>4.2 — Case variants</h2>
+
+            <details class="acc" open>
+              <summary>4.2.1 Card — the baseline <span class="sign">[ - ]</span></summary>
+              <div class="acc-body">
+                <p><strong>104.6 × 69.6 × 11.1 mm · 37.6 g · tray volume 20.6 cm³</strong></p>
+                <p>Two printed parts. The board drops into the tray from the front and rests on four ⌀4.5 bosses; the flat cover closes over it. One M2 screw per corner passes through cover, PCB and boss, so a single set of four screws clamps the whole stack.</p>
+                <p>The back is one unbroken surface — no pinholes, and SW1/SW2 are sealed inside.</p>
+              </div>
+            </details>
+
+            <details class="acc">
+              <summary>4.2.2 Desk nameplate — 18° lean <span class="sign">[ + ]</span></summary>
+              <div class="acc-body">
+                <p><strong>104.6 × 36.1 × 78.3 mm standing · 103 g · plinth 52.8 cm³</strong></p>
+                <p>The card is unchanged — the plinth is fused onto the tray as one printed body, so there is nothing extra to assemble beyond the usual four screws.</p>
+                <p>It stands on its Ymax edge, which puts the USB-C port at the top where it stays reachable and no cable tunnel is needed. Screen centre sits 47.6 mm above the desk, on a 104.6 × 26.9 mm contact patch. Print it standing on the flat plinth base — no supports.</p>
+                <p><strong>Watch out:</strong> standing this way turns the board upside down relative to the card build. Set a 180° rotation in the display driver or the name comes out inverted. Nothing mechanical changes.</p>
+              </div>
+            </details>
+
+            <details class="acc">
+              <summary>4.2.3 Conference badge — hangs either way <span class="sign">[ + ]</span></summary>
+              <div class="acc-body">
+                <p><strong>114.6 × 79.6 × 11.1 mm · 45.8 g · added volume 6.61 cm³</strong></p>
+                <p>Same tray and cover as the card, plus an L-shaped flange wrapping the top and right edges, 10 mm deep and 4 mm thick. It sits centred in the 11.1 mm stack, so the badge hangs flat against the chest instead of tipping forward.</p>
+                <p>The flange wraps the <em>right</em> edge specifically: the left wall carries the FPC exit slot, and a flange there would seal it shut.</p>
+                <p>Four 15 × 3 mm obround slots let one badge hang both ways — the top pair (50 mm apart) for landscape, the side pair (30 mm apart) for portrait. Rounded ends are kinder to lanyard ribbon than square corners.</p>
+                <p><strong>Landscape is the better hang.</strong> Portrait works mechanically, but the active area is 60.1 × 30.7 mm, so hung that way a name gets only 30.7 mm of width — and the closer side slots let it swing more.</p>
+              </div>
+            </details>
+          </section>
+
+          <section class="doc-section" id="assembly">
+            <h2>4.3 — Assembly</h2>
+            <details class="acc" open>
+              <summary>4.3.1 Screw stack-up <span class="sign">[ - ]</span></summary>
+              <div class="acc-body">
+                <table class="dtable">
+                  <tbody>
+                    <tr><td>Head recess</td><td class="v">⌀4.2 × 1.2 counterbore</td></tr>
+                    <tr><td>Through cover</td><td class="v">⌀2.4</td></tr>
+                    <tr><td>Into boss</td><td class="v">⌀1.7 pilot, 4.5 deep</td></tr>
+                    <tr><td>Usable shaft</td><td class="v">6.9 → use M2 × 6</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </details>
+            <details class="acc">
+              <summary>4.3.2 Printing the case yourself <span class="sign">[ + ]</span></summary>
+              <div class="acc-body">
+                <p>Cases are supplied printed, but the models can be printed at home. Orientation matters:</p>
+                <ul>
+                  <li><strong>Card and badge:</strong> back face down.</li>
+                  <li><strong>Nameplate:</strong> standing on the plinth base.</li>
+                </ul>
+                <p>None of the three need supports in the recommended orientation.</p>
+              </div>
+            </details>
+          </section>
+
+          <section class="doc-section" id="ordering">
+            <h2>4.4 — Ordering &amp; delivery</h2>
+            <details class="acc" open>
+              <summary>4.4.1 How an order works <span class="sign">[ - ]</span></summary>
+              <div class="acc-body">
+                <ol>
+                  <li>Pick a variant on the <a href="shop.html">order sheet</a> and send the request.</li>
+                  <li>We reply to confirm the specification, the final price and a timeline.</li>
+                  <li>The board is programmed and the case printed to your spec.</li>
+                  <li>It ships, and you pay on delivery or through a payment link.</li>
+                </ol>
+                <p>Everything is made to order, so allow time for the build before delivery.</p>
+              </div>
+            </details>
+            <details class="acc">
+              <summary>4.4.2 Payment and data <span class="sign">[ + ]</span></summary>
+              <div class="acc-body">
+                <p>Two options: <strong>cash on delivery</strong>, or <strong>request a payment link</strong> which we send once details are confirmed.</p>
+                <p>Order details are emailed straight to us and are <strong>not stored in any database</strong>. There is no account to create, no card details are handled by this site, and nothing is tracked.</p>
+              </div>
+            </details>
+          </section>
+
+          <section class="doc-section" id="care">
+            <h2>4.5 — Care &amp; charging</h2>
+            <details class="acc" open>
+              <summary>4.5.1 Day to day <span class="sign">[ - ]</span></summary>
+              <div class="acc-body">
+                <ul>
+                  <li>Charge over USB-C on the top edge. Any normal phone charger will do.</li>
+                  <li>The e-paper panel holds its image with the power off, so the card still reads when the battery is flat.</li>
+                  <li>The case is PLA — keep it out of a hot parked car, which can soften the plastic.</li>
+                  <li>Wipe with a dry cloth. It is not waterproof.</li>
+                </ul>
+              </div>
+            </details>
+          </section>
+
+          <section class="doc-section" id="faq">
+            <h2>4.6 — Questions</h2>
+            <details class="acc">
+              <summary>Does the person tapping it need an app? <span class="sign">[ + ]</span></summary>
+              <div class="acc-body"><p>No. NFC is built into modern phones — they tap it and your details open. Nothing to install on either side.</p></div>
+            </details>
+            <details class="acc">
+              <summary>Can I change what the card says later? <span class="sign">[ + ]</span></summary>
+              <div class="acc-body"><p>Yes. The card is re-programmable over USB-C. Get in touch and we will walk you through it.</p></div>
+            </details>
+            <details class="acc">
+              <summary>Can I buy a spare case on its own? <span class="sign">[ + ]</span></summary>
+              <div class="acc-body"><p>Yes. All three variants share the same tray, cover and screw pattern, so a board bought today fits a shell printed later. Mention it in the order notes.</p></div>
+            </details>
+            <details class="acc">
+              <summary>Do you deliver outside the UAE? <span class="sign">[ + ]</span></summary>
+              <div class="acc-body"><p>Get in touch with your location and we will confirm whether delivery is possible and what it would cost.</p></div>
+            </details>
+            <details class="acc">
+              <summary>Do you store my personal information? <span class="sign">[ + ]</span></summary>
+              <div class="acc-body"><p>No. Orders arrive by email and live in that inbox only — there is no database behind this site. If accounts are ever added, it will be after the security work to do it properly.</p></div>
+            </details>
+          </section>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="fgrid">
+      <div><h5>DC-001</h5><p class="blurb">Custom embedded hardware, drawn and built to order by Ahmed Alzoubi in the UAE.</p></div>
+      <div><h5>Sheets</h5><a href="index.html">1 · Overview</a><a href="shop.html">2 · Order</a><a href="projects.html">3 · Work</a><a href="docs.html">4 · Docs</a><a href="about.html">5 · Engineer</a></div>
+      <div><h5>Contact</h5><a href="mailto:ahmedmohammedkhear@gmail.com">Email</a><a href="tel:+971508981447">+971 50 898 1447</a><a href="https://github.com/AhmedMKAlzoubi" target="_blank" rel="noopener">GitHub</a></div>
+      <div><h5>Terms</h5><p>Cash on delivery</p><p>Payment link</p><p>No account required</p></div>
+    </div>
+  </div>
+</footer>
+
+<div class="titleblock">
+  <div class="cellx"><span class="k">Project</span><span class="v">DC-001 Digital Card</span></div>
+  <div class="cellx opt"><span class="k">Sheet</span><span class="v">4 of 5</span></div>
+  <div class="cellx opt"><span class="k">Rev</span><span class="v">A</span></div>
+  <div class="cellx opt"><span class="k">Content</span><span class="v">Notes &amp; procedures</span></div>
+  <div class="cellx opt"><span class="k">Drawn by</span><span class="v">A. Alzoubi</span></div>
+  <div class="cellx"><span class="k">Contact</span><span class="v"><a href="mailto:ahmedmohammedkhear@gmail.com">ahmedmohammedkhear@gmail.com</a></span></div>
+  <div class="cellx"><span class="k">Position</span><span class="v" id="scroll-readout">000%</span></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

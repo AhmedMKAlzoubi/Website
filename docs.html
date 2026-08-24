@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Docs — Digital Card</title>
+<meta name="description" content="Specifications, assembly, ordering and care for the Digital Card." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230E6C75'/%3E%3Crect x='8' y='11' width='16' height='11' rx='2' fill='none' stroke='%23fff' stroke-width='2'/%3E%3C/svg%3E" />
+<script>(function(){try{var t=localStorage.getItem("dc-theme");if(t)document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="progress" aria-hidden="true"></div>
+
+<header class="site-header">
+  <div class="container bar">
+    <a class="brand" href="index.html"><span class="glyph" aria-hidden="true">DC</span><span>Digital Card</span></a>
+    <nav class="site-nav" id="site-nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="projects.html">Projects</a>
+      <a href="docs.html" aria-current="page">Docs</a>
+      <a href="about.html">About</a>
+    </nav>
+    <div class="header-tools">
+      <button class="icon-btn" id="theme-toggle" aria-label="Switch to dark theme">
+        <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+      <button class="icon-btn nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="section section--tight">
+    <div class="container">
+      <div class="sec-head reveal">
+        <span class="idx">Docs</span>
+        <h2>Specifications &amp; guides</h2>
+        <p class="note">How the card is put together, how to order one, and how to look after it.</p>
+      </div>
+
+      <div class="docs-wrap">
+        <nav class="docs-rail" aria-label="Documentation sections">
+          <h4>On this page</h4>
+          <a href="#specs" class="active">Specifications</a>
+          <a href="#variants">Case variants</a>
+          <a href="#assembly">Assembly</a>
+          <a href="#ordering">Ordering &amp; delivery</a>
+          <a href="#care">Care &amp; charging</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+
+        <div>
+          <!-- Specs -->
+          <section class="doc-section" id="specs">
+            <h2>Specifications</h2>
+            <dl class="spec-grid" style="margin-top:0;">
+              <div><dt>Board outline</dt><dd>71.82 &times; 36.30 &times; 1.0</dd></div>
+              <div><dt>Active display area</dt><dd>60.088 &times; 30.704</dd></div>
+              <div><dt>Cavity</dt><dd>100.6 &times; 65.6 &times; 5.5</dd></div>
+              <div><dt>Wall / floor</dt><dd>2.0 / 2.0 mm</dd></div>
+              <div><dt>Board clearance</dt><dd>0.30 mm</dd></div>
+              <div><dt>Battery pocket</dt><dd>31 &times; 36 &times; 5.5</dd></div>
+              <div><dt>Antenna strip</dt><dd>15.5 &times; 50.5</dd></div>
+              <div><dt>Fixings</dt><dd>4 &times; M2 &times; 6</dd></div>
+            </dl>
+            <p style="color:var(--muted);font-size:var(--fs-sm);margin-top:var(--s4);">
+              All dimensions in millimetres. The NFC mark is engraved 0.4 mm deep into the cover, leaving a 1.6 mm wall.
+            </p>
+          </section>
+
+          <!-- Variants -->
+          <section class="doc-section" id="variants">
+            <h2>Case variants</h2>
+
+            <details class="acc" open>
+              <summary>Card &mdash; the baseline
+                <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+              </summary>
+              <div class="acc-body">
+                <p><strong>104.6 &times; 69.6 &times; 11.1 mm &middot; 37.6 g</strong></p>
+                <p>Two printed parts. The board drops into the tray from the front and rests on four &#8960;4.5 mm bosses; the flat cover closes over it. One M2 screw per corner passes through cover, PCB and boss, so a single set of four screws clamps the whole stack.</p>
+                <p>The back is one unbroken surface &mdash; no pinholes, and the switches are sealed inside.</p>
+              </div>
+            </details>
+
+            <details class="acc">
+              <summary>Desk nameplate &mdash; 18&deg; lean
+                <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+              </summary>
+              <div class="acc-body">
+                <p><strong>104.6 &times; 36.1 &times; 78.3 mm standing &middot; 103 g</strong></p>
+                <p>The card itself is unchanged &mdash; the plinth is fused onto the tray as one printed body, so there is nothing extra to assemble beyond the usual four screws.</p>
+                <p>It stands on its Ymax edge, which puts the USB-C port at the top where it stays reachable, with no cable tunnel needed. Screen centre sits 47.6 mm above the desk. Print it standing on the flat plinth base &mdash; no supports required.</p>
+                <p><strong>Note:</strong> standing this way turns the board upside down relative to the card build, so the display driver needs a 180&deg; rotation or the name comes out inverted. Nothing mechanical changes.</p>
+              </div>
+            </details>
+
+            <details class="acc">
+              <summary>Conference badge &mdash; hangs either way
+                <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+              </summary>
+              <div class="acc-body">
+                <p><strong>114.6 &times; 79.6 &times; 11.1 mm &middot; 45.8 g</strong></p>
+                <p>Same tray and cover as the card, plus an L-shaped flange wrapping the top and right edges. It sits centred in the 11.1 mm stack, so the badge hangs flat against the chest instead of tipping forward.</p>
+                <p>Four 15 &times; 3 mm obround slots let one badge hang both ways &mdash; the top pair (50 mm apart) for landscape, the side pair (30 mm apart) for portrait. Rounded ends are kinder to lanyard ribbon than square corners.</p>
+                <p><strong>Landscape is the better hang.</strong> Portrait works, but the active area is 60.1 &times; 30.7 mm, so hung that way a name gets only 30.7 mm of width &mdash; and the closer side slots let it swing more.</p>
+              </div>
+            </details>
+          </section>
+
+          <!-- Assembly -->
+          <section class="doc-section" id="assembly">
+            <h2>Assembly</h2>
+            <details class="acc" open>
+              <summary>Screw stack-up
+                <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+              </summary>
+              <div class="acc-body">
+                <ul>
+                  <li><strong>Head recess:</strong> &#8960;4.2 &times; 1.2 counterbore</li>
+                  <li><strong>Through cover:</strong> &#8960;2.4</li>
+                  <li><strong>Into boss:</strong> &#8960;1.7 pilot, 4.5 deep</li>
+                  <li><strong>Usable shaft:</strong> 6.9 mm &mdash; use M2 &times; 6</li>
+                </ul>
+              </div>
+            </details>
+            <details class="acc">
+              <summary>Printing the case yourself
+                <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+              </summary>
+              <div class="acc-body">
+                <p>Cases are supplied printed, but the models can also be printed at home. Orientation matters:</p>
+                <ul>
+                  <li><strong>Card and badge:</strong> back face down.</li>
+                  <li><strong>Nameplate:</strong> standing on the plinth base.</li>
+                </ul>
+                <p>None of the three need supports in the recommended orientation.</p>
+              </div>
+            </details>
+          </section>
+
+          <!-- Ordering -->
+          <section class="doc-section" id="ordering">
+            <h2>Ordering &amp; delivery</h2>
+            <details class="acc" open>
+              <summary>How an order works
+                <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+              </summary>
+              <div class="acc-body">
+                <ol>
+                  <li>Pick a variant in the <a href="shop.html" style="color:var(--accent);">shop</a> and send the order form.</li>
+                  <li>We reply to confirm the details, the final price and a timeline.</li>
+                  <li>The board is programmed and the case printed to your spec.</li>
+                  <li>It ships, and you pay on delivery or through a payment link.</li>
+                </ol>
+                <p>Everything is made to order, so allow time for the build before delivery.</p>
+              </div>
+            </details>
+            <details class="acc">
+              <summary>Payment and privacy
+                <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+              </summary>
+              <div class="acc-body">
+                <p>Two options: <strong>cash on delivery</strong>, or <strong>request a payment link</strong> which we send once details are confirmed.</p>
+                <p>Order details are emailed straight to us and are <strong>not stored in any database</strong>. There is no account to create, no card details are handled by this site, and nothing is tracked.</p>
+              </div>
+            </details>
+          </section>
+
+          <!-- Care -->
+          <section class="doc-section" id="care">
+            <h2>Care &amp; charging</h2>
+            <details class="acc" open>
+              <summary>Day-to-day
+                <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+              </summary>
+              <div class="acc-body">
+                <ul>
+                  <li>Charge over USB-C on the top edge. Use a normal phone charger &mdash; nothing special needed.</li>
+                  <li>The e-paper panel keeps its image with the power off, so the card still reads when the battery is flat.</li>
+                  <li>The case is PLA. Keep it out of a hot parked car, which can soften the plastic.</li>
+                  <li>Wipe with a dry cloth. It is not waterproof.</li>
+                </ul>
+              </div>
+            </details>
+          </section>
+
+          <!-- FAQ -->
+          <section class="doc-section" id="faq">
+            <h2>FAQ</h2>
+            <details class="acc">
+              <summary>Does the person tapping it need an app?
+                <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+              </summary>
+              <div class="acc-body"><p>No. NFC is built into modern phones &mdash; they tap it and your details open. Nothing to install on either side.</p></div>
+            </details>
+            <details class="acc">
+              <summary>Can I change what the card says later?
+                <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+              </summary>
+              <div class="acc-body"><p>Yes. The card is re-programmable over USB-C. Get in touch and we will walk you through it.</p></div>
+            </details>
+            <details class="acc">
+              <summary>Can I buy a spare case on its own?
+                <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+              </summary>
+              <div class="acc-body"><p>Yes. All three variants share the same tray, cover and screw pattern, so a board bought today fits a shell printed later. Mention it in the order notes.</p></div>
+            </details>
+            <details class="acc">
+              <summary>Do you deliver outside the UAE?
+                <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+              </summary>
+              <div class="acc-body"><p>Get in touch with your location and we will confirm whether delivery is possible and what it would cost.</p></div>
+            </details>
+            <details class="acc">
+              <summary>Do you store my personal information?
+                <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+              </summary>
+              <div class="acc-body"><p>No. Orders arrive by email and live in that inbox only &mdash; there is no database behind this site. If accounts are ever added, it will be after the security work to do it properly.</p></div>
+            </details>
+          </section>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="index.html" style="margin-bottom:var(--s4);"><span class="glyph" aria-hidden="true">DC</span><span>Digital Card</span></a>
+        <p class="about-blurb">Custom embedded hardware, designed and built to order by Ahmed Alzoubi.</p>
+      </div>
+      <div>
+        <h5>Explore</h5>
+        <a href="shop.html">Shop</a><a href="projects.html">Projects</a><a href="docs.html">Docs</a><a href="about.html">About</a>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <a href="mailto:ahmedmohammedkhear@gmail.com">Email</a>
+        <a href="tel:+971508981447">+971 50 898 1447</a>
+        <a href="https://github.com/AhmedMKAlzoubi" target="_blank" rel="noopener">GitHub</a>
+      </div>
+      <div>
+        <h5>Ordering</h5>
+        <p>Cash on delivery</p><p>Payment link</p><p>No account needed</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Ahmed Alzoubi</span>
+      <span>No tracking &middot; No database</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

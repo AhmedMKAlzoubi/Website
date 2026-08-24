@@ -1,43 +1,75 @@
-# Embedded Projects — website
+# Digital Card — website
 
-A single-page site for presenting and selling embedded projects.
-Black and white, scroll-based: landing at the top, projects in the middle
-(alternating left/right), an order form, and a fixed contact strip at the bottom.
+A five-page site for presenting and selling the Digital Card (a custom NFC business
+card) and other embedded builds.
 
-No database is used. Orders are emailed to you through a free relay
-(FormSubmit) and are not stored anywhere.
+Light theme by default with a dark toggle, scroll-driven animations, and interactive
+3D models exported straight from KiCad and FreeCAD.
 
-## Files
+**No database.** Orders are emailed through a relay (FormSubmit) and are not stored
+anywhere.
 
-- `index.html` — the page content
-- `style.css` — all styling
-- `script.js` — order buttons and form sending
-- `images/` — project photos (placeholders for now)
+## Pages
 
-## How to change things (no coding experience needed)
+| File | What it is |
+|---|---|
+| `index.html` | Home — hero, case-variant explorer, feature grid |
+| `shop.html`  | Products, prices, and the order form |
+| `projects.html` | Portfolio of past builds |
+| `docs.html`  | Specs, assembly, ordering, FAQ |
+| `about.html` | Background, toolkit, certificates |
 
-**Change the email that receives orders**
-1. In `script.js`, edit the line `const ORDER_EMAIL = "...";`
-2. In `index.html`, edit the form's `action="https://formsubmit.co/...your email..."`
-3. In `index.html`, edit the email shown in the bottom contact strip.
+Shared: `style.css`, `script.js`, `images/`, `models/`.
 
-**One-time activation (do this once):** Submit one test order on the site.
-FormSubmit will email you a link to confirm. Click it once, and after that all
-orders arrive in your inbox automatically.
+## The 3D models
 
-**Edit contact info:** In `index.html`, find the `contact-strip` section near the
-bottom and change the phone and location.
+| File | Source |
+|---|---|
+| `models/digital_card.glb` | The PCB, exported from KiCad |
+| `models/case-card.glb` | Card variant (tray + cover) |
+| `models/case-nameplate.glb` | Desk nameplate variant |
+| `models/case-badge.glb` | Conference badge variant |
 
-**Add a project:** Copy one `<article class="project"> ... </article>` block in
-`index.html`, change the title, description, price, and the `data-project` value
-on the Order button.
+**Regenerate the PCB** after changing the board:
 
-**Replace a placeholder photo:** Put your image in the `images/` folder and change
-the `src="images/project-1.svg"` to your file (e.g. `images/project-1.jpg`).
+```
+kicad-cli pcb export glb --output models/digital_card.glb --include-soldermask --include-silkscreen --subst-models --force "C:/Users/Ahmed/Desktop/digital_card/digital card.kicad_pcb"
+```
+
+**Regenerate a case** after changing the STLs — needs `pip install trimesh numpy scipy`,
+then load the tray and cover, centre them, and export as `.glb`.
+
+## How to change things (no coding needed)
+
+**Where orders are sent** — three places:
+1. `script.js`, the `ORDER_EMAIL` line at the top
+2. `shop.html`, the form's `action="https://formsubmit.co/...your email..."`
+3. The footer email on all five pages
+
+**One-time activation:** send one test order. FormSubmit emails you a confirmation
+link — click it once and every order after that lands in your inbox automatically.
+
+**Prices** — in `shop.html`, look for `class="price"`.
+
+**Brand name** — currently "Digital Card". It appears in the header and footer of
+each page next to `class="glyph"`, and in each page's `<title>`.
+
+**Contact details** — the footer block near the bottom of each page.
+
+**Colours** — all at the top of `style.css` under `:root` (light) and
+`:root[data-theme="dark"]`. Change once, it applies everywhere.
+
+## Run it locally
+
+```
+python -m http.server 8080
+```
+
+Then open http://localhost:8080/
 
 ## Notes for later
 
-- Real card payments (Stripe, etc.) are not included yet — for now customers
-  choose "cash on delivery" or "request a payment link".
-- When you want stronger privacy/security, the email relay can be replaced with
-  your own backend.
+- Card payments (Stripe etc.) are not wired up — customers choose cash on delivery
+  or ask for a payment link.
+- The 3D viewer library and fonts load from a CDN; everything else is local.
+- The previous dark-only build is kept untouched at `../WebsiteProject-v1-backup/`.

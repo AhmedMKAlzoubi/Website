@@ -1,158 +1,306 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Embedded Projects</title>
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Digital Card — a business card with a pulse</title>
+<meta name="description" content="A custom NFC business card with an e-paper panel and three 3D-printed case variants: card, desk nameplate, and conference badge." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%237C6CFF'/%3E%3Crect x='8' y='11' width='16' height='11' rx='2' fill='none' stroke='%2317D4C4' stroke-width='2.4'/%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" />
+<link rel="stylesheet" href="style.css" />
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="progress" aria-hidden="true"></div>
+<div class="aurora" aria-hidden="true"><span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span></div>
+<div class="spotlight" aria-hidden="true"></div>
 
-  <!-- ===== Top bar ===== -->
-  <header class="topbar">
-    <a href="#home" class="brand">EMBEDDED PROJECTS</a>
-    <nav>
-      <a href="#projects">Projects</a>
-      <a href="#order">Order</a>
+<header class="site-header">
+  <div class="container bar">
+    <a class="brand" href="index.html"><span class="glyph" aria-hidden="true">DC</span><span>Digital Card</span></a>
+    <nav class="site-nav" id="site-nav" aria-label="Primary">
+      <a href="index.html" aria-current="page"><span>Home</span></a>
+      <a href="shop.html"><span>Shop</span></a>
+      <a href="projects.html"><span>Projects</span></a>
+      <a href="docs.html"><span>Docs</span></a>
+      <a href="about.html"><span>About</span></a>
     </nav>
-  </header>
+    <div class="header-tools">
+      <a class="btn" href="shop.html" style="padding:.6rem 1.2rem;"><span>Order</span></a>
+      <button class="icon-btn nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
 
-  <!-- ===== Landing / Home ===== -->
-  <section id="home" class="hero">
-    <div class="hero-inner">
-      <h1>Embedded Projects</h1>
-      <p class="lead">
-        Custom embedded systems and hardware, designed and built to order.
-        Browse the work below, then place an order for cash on delivery or by payment link.
-      </p>
-      <a href="#projects" class="scroll-cue">Scroll to view projects</a>
+<main id="main">
+
+  <!-- ================= Hero ================= -->
+  <section class="section hero" data-accent="teal" data-accent-2="violet">
+    <div class="container hero-grid">
+      <div>
+        <span class="kicker"><span class="dot" aria-hidden="true"></span> Built in the UAE &middot; made to order</span>
+        <h1>
+          <span class="split-line">A business card</span>
+          <span class="split-line grad-text">with a pulse.</span>
+        </h1>
+        <p class="lead">
+          Custom PCB. E-paper panel. Tap it to a phone and your details land instantly &mdash;
+          no app, no paper, no drawer full of forgotten rectangles.
+        </p>
+        <div class="hero-actions">
+          <a href="shop.html" class="btn"><span>Order one</span> <span class="arw" aria-hidden="true">&rarr;</span></a>
+          <a href="#variants" class="btn btn--ghost"><span>Explore the variants</span></a>
+        </div>
+        <div class="hero-facts">
+          <div><b><span data-count="104.6">104.6</span></b><span>mm wide</span></div>
+          <div><b><span data-count="11.1">11.1</span></b><span>mm thin</span></div>
+          <div><b><span data-count="37.6">37.6</span></b><span>grams</span></div>
+          <div><b><span data-count="3">3</span></b><span>variants</span></div>
+        </div>
+      </div>
+
+      <div class="stage tilt reveal">
+        <span class="stage-tag">Rev A &mdash; bare board</span>
+        <model-viewer
+          src="models/digital_card.glb"
+          alt="3D model of the Digital Card printed circuit board"
+          camera-orbit="-25deg 68deg 105%"
+          auto-rotate auto-rotate-delay="500" rotation-per-second="18deg"
+          camera-controls touch-action="pan-y" interaction-prompt="none"
+          shadow-intensity="0.9" exposure="1.25" environment-image="neutral" loading="eager">
+        </model-viewer>
+        <span class="stage-hint">drag me</span>
+      </div>
     </div>
   </section>
 
-  <!-- ===== Projects ===== -->
-  <section id="projects" class="projects">
-    <h2 class="section-title">Projects</h2>
+  <!-- ================= Marquee ================= -->
+  <div class="marquee-band" aria-hidden="true">
+    <div class="mq mq--l">
+      <b>ESP32-C3</b><b>NFC tap-to-share</b><b>E-paper</b><b>USB-C</b><b>Li-Po</b><b>KiCad</b>
+      <b>ESP32-C3</b><b>NFC tap-to-share</b><b>E-paper</b><b>USB-C</b><b>Li-Po</b><b>KiCad</b>
+    </div>
+    <div class="mq mq--r">
+      <b>Sealed back</b><b>3D-printed case</b><b>Four M2 screws</b><b>Made to order</b><b>No app needed</b><b>Open hardware</b>
+      <b>Sealed back</b><b>3D-printed case</b><b>Four M2 screws</b><b>Made to order</b><b>No app needed</b><b>Open hardware</b>
+    </div>
+  </div>
 
-    <!-- Project 1 -->
-    <article class="project">
-      <div class="project-media">
-        <img src="images/project-1.svg" alt="Temperature and humidity monitor" />
+  <!-- ================= Variants ================= -->
+  <section class="section" id="variants" data-accent="teal" data-accent-2="violet">
+    <div class="container">
+      <div class="sec-head reveal">
+        <span class="kicker"><span class="dot" aria-hidden="true"></span> 01 &mdash; Pick your shell</span>
+        <h2>One board. <span class="grad-text">Three personalities.</span></h2>
+        <p>The electronics never change &mdash; only the body around them. Same tray, same cover, same four screws.</p>
       </div>
-      <div class="project-body">
-        <h3>Temperature &amp; Humidity Monitor</h3>
-        <p>A compact sensor unit with a clear display and configurable alerts. Ideal for rooms, greenhouses, and storage.</p>
-        <p class="price">$120</p>
-        <button class="btn order-btn" data-project="Temperature & Humidity Monitor">Order</button>
-      </div>
-    </article>
 
-    <!-- Project 2 -->
-    <article class="project">
-      <div class="project-media">
-        <img src="images/project-2.svg" alt="Smart home controller" />
-      </div>
-      <div class="project-body">
-        <h3>Smart Home Controller</h3>
-        <p>Control lights, fans, and appliances from one small board. Works standalone or over your local network.</p>
-        <p class="price">$180</p>
-        <button class="btn order-btn" data-project="Smart Home Controller">Order</button>
-      </div>
-    </article>
+      <div class="explorer">
+        <div class="variant-tabs" role="tablist" aria-label="Case variant">
+          <button class="vtab" role="tab" aria-selected="true" style="--vc:var(--c-teal)"
+            data-colour="teal" data-model="models/case-card.glb"
+            data-alt="3D model of the flat card case" data-name="Card"
+            data-note="The baseline. Flat in the hand, sealed back, NFC mark engraved over the antenna."
+            data-specs='[["Footprint","104.6 &times; 69.6"],["Stack","11.1 mm"],["Weight","37.6 g"],["Fixings","4 &times; M2"]]'>
+            <span class="vnum" aria-hidden="true">01</span>
+            <span><h3>Card</h3><p>Flat in the hand</p></span>
+            <span class="vdim">11.1 mm</span>
+          </button>
 
-    <!-- Project 3 -->
-    <article class="project">
-      <div class="project-media">
-        <img src="images/project-3.svg" alt="Custom data logger" />
+          <button class="vtab" role="tab" aria-selected="false" style="--vc:var(--c-amber)"
+            data-colour="amber" data-model="models/case-nameplate.glb"
+            data-alt="3D model of the desk nameplate case" data-name="Desk nameplate"
+            data-note="A rounded plinth fused to the tray, leaning 18&deg; so the panel faces you across a desk."
+            data-specs='[["Standing","104.6 &times; 36.1"],["Lean","18&deg;"],["Weight","103 g"],["Screen height","47.6 mm"]]'>
+            <span class="vnum" aria-hidden="true">02</span>
+            <span><h3>Desk nameplate</h3><p>Leans back 18&deg;</p></span>
+            <span class="vdim">78.3 mm</span>
+          </button>
+
+          <button class="vtab" role="tab" aria-selected="false" style="--vc:var(--c-violet)"
+            data-colour="violet" data-model="models/case-badge.glb"
+            data-alt="3D model of the conference badge case" data-name="Conference badge"
+            data-note="An L-shaped flange with four lanyard slots, so one badge hangs landscape or portrait."
+            data-specs='[["Outline","114.6 &times; 79.6"],["Slots","4 &times; 15 &times; 3"],["Weight","45.8 g"],["Hangs","2 ways"]]'>
+            <span class="vnum" aria-hidden="true">03</span>
+            <span><h3>Conference badge</h3><p>Hangs either way</p></span>
+            <span class="vdim">114.6 mm</span>
+          </button>
+
+          <p style="color:var(--muted);font-size:var(--fs-sm);margin-top:var(--s4);">
+            Buy a board today, print a different shell next year &mdash; they all fit.
+          </p>
+        </div>
+
+        <div class="variant-view">
+          <div class="stage tilt">
+            <span class="stage-tag" id="variant-name">Card</span>
+            <model-viewer id="variant-model"
+              src="models/case-card.glb" alt="3D model of the flat card case"
+              camera-orbit="-30deg 66deg 105%"
+              auto-rotate auto-rotate-delay="500" rotation-per-second="20deg"
+              camera-controls touch-action="pan-y" interaction-prompt="none"
+              shadow-intensity="1" exposure="1.3" environment-image="neutral">
+            </model-viewer>
+            <span class="stage-hint">drag me</span>
+          </div>
+          <dl class="spec-grid" id="variant-specs"></dl>
+          <p id="variant-note" style="color:var(--muted);font-size:var(--fs-sm);margin-top:var(--s4);"></p>
+        </div>
       </div>
-      <div class="project-body">
-        <h3>Custom PCB Data Logger</h3>
-        <p>Records sensor data to storage with a real-time clock. Built to your channel count and sampling needs.</p>
-        <p class="price">$150</p>
-        <button class="btn order-btn" data-project="Custom PCB Data Logger">Order</button>
-      </div>
-    </article>
+    </div>
   </section>
 
-  <!-- ===== Order ===== -->
-  <section id="order" class="order">
-    <h2 class="section-title">Place an Order</h2>
-    <p class="order-note">
-      Fill in your details below. You can pay <strong>cash on delivery</strong> or
-      <strong>request a payment link</strong>. Your order is sent directly to us &mdash; nothing is stored in a database.
-    </p>
-
-    <form id="order-form" action="https://formsubmit.co/ahmedmohammedkhear@gmail.com" method="POST">
-      <!-- FormSubmit settings -->
-      <input type="hidden" name="_subject" value="New order from website" />
-      <input type="hidden" name="_template" value="table" />
-      <input type="hidden" name="_captcha" value="false" />
-      <!-- Honeypot: hidden field to trap spam bots -->
-      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
-
-      <label>
-        Full name
-        <input type="text" name="Name" required />
-      </label>
-
-      <label>
-        Phone
-        <input type="tel" name="Phone" required />
-      </label>
-
-      <label>
-        Email (optional)
-        <input type="email" name="Email" />
-      </label>
-
-      <label>
-        Project
-        <input type="text" name="Project" id="project-field" required />
-      </label>
-
-      <label>
-        Quantity
-        <input type="number" name="Quantity" value="1" min="1" required />
-      </label>
-
-      <label>
-        Delivery location / address
-        <textarea name="Delivery location" rows="3" required></textarea>
-      </label>
-
-      <fieldset class="payment">
-        <legend>Payment method</legend>
-        <label class="radio">
-          <input type="radio" name="Payment method" value="Cash on delivery" checked />
-          Cash on delivery
-        </label>
-        <label class="radio">
-          <input type="radio" name="Payment method" value="Request payment link" />
-          Request payment link
-        </label>
-      </fieldset>
-
-      <label>
-        Notes (optional)
-        <textarea name="Notes" rows="2"></textarea>
-      </label>
-
-      <button type="submit" class="btn btn-block">Submit order</button>
-      <p id="form-status" class="form-status" role="status"></p>
-    </form>
+  <!-- ================= Horizontal story ================= -->
+  <section class="hscroll" data-accent="pink" data-accent-2="amber" aria-label="How a card is made">
+    <div class="hscroll-sticky">
+      <div class="hscroll-track">
+        <div class="step" style="--sc:var(--c-teal)">
+          <span class="sn">01</span>
+          <h3>Drawn in KiCad</h3>
+          <p>Schematic, footprints and board layout from a blank sheet &mdash; not a reference design with a new silkscreen on top. Every trace placed on purpose.</p>
+        </div>
+        <div class="step" style="--sc:var(--c-violet)">
+          <span class="sn">02</span>
+          <h3>Fabricated &amp; assembled</h3>
+          <p>Boards come back bare. Components go on by hand, then the panel, the antenna and the battery get fitted and checked.</p>
+        </div>
+        <div class="step" style="--sc:var(--c-amber)">
+          <span class="sn">03</span>
+          <h3>Case modelled to fit</h3>
+          <p>The shell is modelled around the finished board &mdash; 0.30 mm clearance, four &#8960;4.5 bosses, and an NFC mark engraved 0.4 mm into the cover.</p>
+        </div>
+        <div class="step" style="--sc:var(--c-pink)">
+          <span class="sn">04</span>
+          <h3>Printed &amp; assembled</h3>
+          <p>Tray and cover printed in your colour, board dropped in, one M2 screw per corner. No supports needed in the right orientation.</p>
+        </div>
+        <div class="step" style="--sc:var(--c-lime)">
+          <span class="sn">05</span>
+          <h3>Programmed &amp; sent</h3>
+          <p>Your name, title and links written to the panel and the NFC tag. Then it ships &mdash; pay on delivery or by link.</p>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <!-- spacer so the fixed contact strip never covers content -->
-  <div class="bottom-spacer"></div>
+  <!-- ================= Bento ================= -->
+  <section class="section" data-accent="lime" data-accent-2="teal">
+    <div class="container">
+      <div class="sec-head reveal">
+        <span class="kicker"><span class="dot" aria-hidden="true"></span> 02 &mdash; Under the hood</span>
+        <h2>Small board, <span class="grad-text">plenty going on.</span></h2>
+        <p>Every millimetre had to earn its place at 11.1 mm thick.</p>
+      </div>
 
-  <!-- ===== Fixed contact strip ===== -->
-  <footer class="contact-strip">
-    <span>Email: ahmedmohammedkhear@gmail.com</span>
-    <span class="dot">&middot;</span>
-    <span>Phone: +000 000 0000</span>
-    <span class="dot">&middot;</span>
-    <span>Location: Your City</span>
-  </footer>
+      <div class="bento">
+        <div class="cell cell--wide reveal" style="--cc:var(--c-teal)">
+          <span class="k">Tap to share</span>
+          <h3>NFC, aimed at exactly the right spot</h3>
+          <p>The contactless mark is engraved 0.4 mm into the cover and runs up the antenna strip &mdash; so the symbol sits directly over the antenna it points at. Tap a phone, your details open. Nothing to install on either side.</p>
+        </div>
+        <div class="cell cell--third reveal" style="--cc:var(--c-violet)">
+          <span class="k">Display</span>
+          <div class="big">60.1</div>
+          <p>&times; 30.7 mm of active e-paper. Holds its image with the power off.</p>
+        </div>
 
-  <script src="script.js"></script>
+        <div class="cell cell--third reveal" style="--cc:var(--c-amber)">
+          <span class="k">Sealed</span>
+          <h3>No holes in the back</h3>
+          <p>The rear face is one unbroken surface. Switches live inside, safe from pocket lint.</p>
+        </div>
+        <div class="cell cell--third reveal" style="--cc:var(--c-pink)">
+          <span class="k">Power</span>
+          <h3>USB-C and Li-Po</h3>
+          <p>Charges from any phone charger. Battery pocket is 31 &times; 36 &times; 5.5 mm.</p>
+        </div>
+        <div class="cell cell--third reveal" style="--cc:var(--c-lime)">
+          <span class="k">Serviceable</span>
+          <h3>Four screws, that is it</h3>
+          <p>One M2 through each corner clamps cover, board and boss. Opens as easily as it closes.</p>
+        </div>
+
+        <div class="cell cell--half reveal" style="--cc:var(--c-coral)">
+          <span class="k">Made to order</span>
+          <h3>Your name, your layout, your colour</h3>
+          <p>Each card is programmed and printed per order. Tell us what it should say and which colour to print &mdash; the order form has a box for exactly that.</p>
+        </div>
+        <div class="cell cell--half reveal" style="--cc:var(--c-teal)">
+          <span class="k">Open hardware</span>
+          <h3>Yours to print</h3>
+          <p>The case models are printable STLs, and all three variants share one tray, cover and screw pattern. Print a spare shell whenever you fancy a change.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Projects ================= -->
+  <section class="section" data-accent="coral" data-accent-2="pink" style="padding-top:0;">
+    <div class="container">
+      <div class="sec-head reveal">
+        <span class="kicker"><span class="dot" aria-hidden="true"></span> 03 &mdash; The back catalogue</span>
+        <h2>Other things <span class="grad-text">I have built.</span></h2>
+        <p>The card is the newest. Here is what led up to it.</p>
+      </div>
+
+      <div class="proj-list reveal">
+        <a class="proj" href="projects.html" style="--cc:var(--c-teal)">
+          <span class="n">01</span><span><h3>Smart Helmet with HUD Navigation</h3></span>
+          <span class="stack">ESP32 &middot; BLE &middot; Android</span><span class="go" aria-hidden="true">&rarr;</span>
+        </a>
+        <a class="proj" href="projects.html" style="--cc:var(--c-violet)">
+          <span class="n">02</span><span><h3>Digital Lock System</h3></span>
+          <span class="stack">VHDL &middot; FPGA</span><span class="go" aria-hidden="true">&rarr;</span>
+        </a>
+        <a class="proj" href="projects.html" style="--cc:var(--c-amber)">
+          <span class="n">03</span><span><h3>Temperature-Controlled Fan</h3></span>
+          <span class="stack">PIC &middot; LM35 &middot; DHT11</span><span class="go" aria-hidden="true">&rarr;</span>
+        </a>
+        <a class="proj" href="projects.html" style="--cc:var(--c-pink)">
+          <span class="n">04</span><span><h3>Arduino Weather Station</h3></span>
+          <span class="stack">Arduino &middot; multi-sensor</span><span class="go" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CTA ================= -->
+  <section class="section" data-accent="violet" data-accent-2="pink" style="padding-top:0;">
+    <div class="container">
+      <div class="cta reveal">
+        <h2>Want one with <span class="grad-text">your name on it?</span></h2>
+        <p>Every card is built to order. Cash on delivery or a payment link &mdash; whichever suits you.</p>
+        <div class="hero-actions" style="justify-content:center;margin-bottom:0;">
+          <a href="shop.html" class="btn"><span>Order a card</span> <span class="arw" aria-hidden="true">&rarr;</span></a>
+          <a href="docs.html" class="btn btn--ghost"><span>Read the docs</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="index.html" style="margin-bottom:var(--s4);"><span class="glyph" aria-hidden="true">DC</span><span>Digital Card</span></a>
+        <p class="about-blurb">Custom embedded hardware, designed and built to order by Ahmed Alzoubi.</p>
+      </div>
+      <div><h5>Explore</h5><a href="shop.html">Shop</a><a href="projects.html">Projects</a><a href="docs.html">Docs</a><a href="about.html">About</a></div>
+      <div><h5>Contact</h5><a href="mailto:ahmedmohammedkhear@gmail.com">Email</a><a href="tel:+971508981447">+971 50 898 1447</a><a href="https://github.com/AhmedMKAlzoubi" target="_blank" rel="noopener">GitHub</a></div>
+      <div><h5>Ordering</h5><p>Cash on delivery</p><p>Payment link</p><p>No account needed</p></div>
+    </div>
+    <div class="footer-bottom"><span>&copy; 2026 Ahmed Alzoubi</span><span>No tracking &middot; No database</span></div>
+  </div>
+</footer>
+
+<script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

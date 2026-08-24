@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Projects — Digital Card</title>
+<meta name="description" content="Embedded systems, FPGA and microcontroller projects built by Ahmed Alzoubi." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%237C6CFF'/%3E%3Crect x='8' y='11' width='16' height='11' rx='2' fill='none' stroke='%2317D4C4' stroke-width='2.4'/%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="progress" aria-hidden="true"></div>
+<div class="aurora" aria-hidden="true"><span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span></div>
+<div class="spotlight" aria-hidden="true"></div>
+
+<header class="site-header">
+  <div class="container bar">
+    <a class="brand" href="index.html"><span class="glyph" aria-hidden="true">DC</span><span>Digital Card</span></a>
+    <nav class="site-nav" id="site-nav" aria-label="Primary">
+      <a href="index.html"><span>Home</span></a>
+      <a href="shop.html"><span>Shop</span></a>
+      <a href="projects.html" aria-current="page"><span>Projects</span></a>
+      <a href="docs.html"><span>Docs</span></a>
+      <a href="about.html"><span>About</span></a>
+    </nav>
+    <div class="header-tools">
+      <a class="btn" href="shop.html" style="padding:.6rem 1.2rem;"><span>Order</span></a>
+      <button class="icon-btn nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="section" data-accent="coral" data-accent-2="amber">
+    <div class="container">
+      <div class="sec-head reveal">
+        <span class="kicker"><span class="dot" aria-hidden="true"></span> Projects</span>
+        <h2>Things I have <span class="grad-text">designed and built.</span></h2>
+        <p>Graduation work, coursework, and the builds that led to the Digital Card.</p>
+      </div>
+
+      <div class="bento">
+        <article class="cell cell--wide reveal" style="--cc:var(--c-teal)">
+          <span class="k">Flagship &middot; 2026</span>
+          <h3>Digital Card</h3>
+          <p>A custom NFC business card: ESP32-C3, e-paper panel, USB-C charging and a Li-Po cell on a board drawn from scratch in KiCad. Three 3D-printed case variants share one tray, cover and screw pattern &mdash; card, desk nameplate and conference badge. The NFC mark is engraved into the cover directly over the antenna.</p>
+          <p style="margin-top:var(--s5);"><a href="shop.html" class="btn"><span>Order one</span> <span class="arw" aria-hidden="true">&rarr;</span></a></p>
+        </article>
+
+        <article class="cell cell--third reveal" style="--cc:var(--c-violet)">
+          <span class="k">Graduation project</span>
+          <h3>Smart Helmet, HUD navigation</h3>
+          <p>An ESP32 motorcycle helmet that projects turn-by-turn directions onto a transparent OLED, so a rider never looks down. A companion Android app feeds it over BLE using the Google Maps API.</p>
+          <p style="margin-top:var(--s3);font-family:var(--mono);font-size:var(--fs-micro);color:var(--muted);">ESP32 &middot; BLE &middot; Transparent OLED &middot; C++</p>
+        </article>
+
+        <article class="cell cell--third reveal" style="--cc:var(--c-amber)">
+          <span class="k">FPGA</span>
+          <h3>Digital Lock System</h3>
+          <p>A secure lock in VHDL on FPGA, with password authentication and a state-machine access-control design.</p>
+          <p style="margin-top:var(--s3);font-family:var(--mono);font-size:var(--fs-micro);color:var(--muted);">VHDL &middot; Xilinx ISE</p>
+        </article>
+
+        <article class="cell cell--third reveal" style="--cc:var(--c-pink)">
+          <span class="k">Microcontroller</span>
+          <h3>Temperature-Controlled Fan</h3>
+          <p>A PIC-based cooling system reading LM35 and DHT11 sensors and adjusting fan speed automatically, with live LCD feedback.</p>
+          <p style="margin-top:var(--s3);font-family:var(--mono);font-size:var(--fs-micro);color:var(--muted);">PIC &middot; MikroC &middot; LM35 &middot; DHT11</p>
+        </article>
+
+        <article class="cell cell--half reveal" style="--cc:var(--c-lime)">
+          <span class="k">Sensing</span>
+          <h3>Arduino Weather Station</h3>
+          <p>A multi-sensor station measuring temperature, humidity and rainfall, with everything shown live on an LCD for environmental data collection.</p>
+          <p style="margin-top:var(--s3);font-family:var(--mono);font-size:var(--fs-micro);color:var(--muted);">Arduino UNO &middot; DHT11 &middot; rain sensor</p>
+        </article>
+
+        <article class="cell cell--half reveal" style="--cc:var(--c-coral)">
+          <span class="k">Security</span>
+          <h3>Motion Sensor Security System</h3>
+          <p>A motion-activated alarm using a PIR sensor to spot intruders, triggering visual and audible alerts with an LCD status display.</p>
+          <p style="margin-top:var(--s3);font-family:var(--mono);font-size:var(--fs-micro);color:var(--muted);">Arduino UNO &middot; PIR &middot; buzzer &middot; LCD</p>
+        </article>
+
+        <article class="cell cell--wide reveal" style="--cc:var(--c-violet)">
+          <span class="k">Robotics simulation</span>
+          <h3>Pick-and-Place Robotic Arm</h3>
+          <p>A 6-DOF arm simulated in RoboDK for automated pick-and-place in an industrial setting, working through forward and inverse kinematics for precise object manipulation.</p>
+          <p style="margin-top:var(--s3);font-family:var(--mono);font-size:var(--fs-micro);color:var(--muted);">RoboDK &middot; 6-DOF &middot; kinematics</p>
+        </article>
+
+        <article class="cell cell--third reveal" style="--cc:var(--c-teal)">
+          <span class="k">Get in touch</span>
+          <h3>Something else in mind?</h3>
+          <p>Most of these can be adapted, and new builds are welcome. Tell me what it needs to do.</p>
+          <p style="margin-top:var(--s5);"><a href="shop.html#order" class="btn btn--ghost"><span>Start a build</span> <span class="arw" aria-hidden="true">&rarr;</span></a></p>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="index.html" style="margin-bottom:var(--s4);"><span class="glyph" aria-hidden="true">DC</span><span>Digital Card</span></a>
+        <p class="about-blurb">Custom embedded hardware, designed and built to order by Ahmed Alzoubi.</p>
+      </div>
+      <div><h5>Explore</h5><a href="shop.html">Shop</a><a href="projects.html">Projects</a><a href="docs.html">Docs</a><a href="about.html">About</a></div>
+      <div><h5>Contact</h5><a href="mailto:ahmedmohammedkhear@gmail.com">Email</a><a href="tel:+971508981447">+971 50 898 1447</a><a href="https://github.com/AhmedMKAlzoubi" target="_blank" rel="noopener">GitHub</a></div>
+      <div><h5>Ordering</h5><p>Cash on delivery</p><p>Payment link</p><p>No account needed</p></div>
+    </div>
+    <div class="footer-bottom"><span>&copy; 2026 Ahmed Alzoubi</span><span>No tracking &middot; No database</span></div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
